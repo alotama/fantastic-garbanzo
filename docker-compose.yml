@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  challenge-meli:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/node/src
+      - /home/node/src/node_modules
