@@ -1,0 +1,22 @@
+@import './variables';
+
+html {
+  background-color: $grey-3;
+}
+
+figure {
+  margin: 0;
+}
+
+.layout__container {
+  @include content-container;
+}
+
+.layout__content {
+  @include content-wrapper;
+}
+
+.layout__main {
+  min-height: 100vh;
+  height: 100%;
+}

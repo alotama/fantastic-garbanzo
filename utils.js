@@ -31,7 +31,7 @@ export const getAsignedPropertyToProductTemplate = (template, object, picture) =
       template.picture = getProductPicture(object)
       break;
     default:
-      template.picture = object.picture
+      template.picture = object.thumbnail;
       break;
   }
 

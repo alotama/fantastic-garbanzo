@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.container {
+  display: flex;
+  padding: $space-md 0;
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $grey-3;
+  }
+}
+
+.imageContainer {
+  margin-right: $space-md;
+  & > img {
+    height: 11.25rem;
+    width: 11.25rem;
+  }
+}
+
+.descriptionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

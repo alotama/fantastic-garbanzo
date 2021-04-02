@@ -1,0 +1,34 @@
+@mixin font-body {
+  font-size: 1rem; //16px
+  line-height: 1.2;
+}
+
+@mixin font-detail {
+  font-size: 0.75rem; //12px
+  line-height: 1;
+}
+
+@mixin font-small {
+  font-size: 0.875rem; //14p
+  line-height: 1.2;
+}
+
+@mixin font-big {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+@mixin font-headering-3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+@mixin font-headering-2 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+@mixin font-headering-1 {
+  font-size: 2.875rem;
+  line-height: 1.2;
+}

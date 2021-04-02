@@ -1,18 +1,18 @@
 import React from 'react';
+import Layout from '../../components/layout'
+import ProductList from '../../components/productList'
+import Breadcrumb from '../../components/breadcrumb'
 
 const SearchResult = ({ categories, items }) => {
   return (
-    <>
-      <h1>Resultado de búsqueda 2</h1>
-      <h2>Categorias: {categories.map(element => element)}</h2>
-      {items.map((element, key) => (
-        <code key={key}>
-          {element.title}
-          {element.location}
-          {element.price.amount}
-        </code>
-      ))}
-    </>
+    <Layout>
+      <Breadcrumb
+        steps={categories}
+      />
+      <ProductList
+        products={items}
+      />
+    </Layout>
   )
 }
 

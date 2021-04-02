@@ -1,0 +1,8 @@
+@import '../../styles/variables.scss';
+
+.productClusterContainer {
+  background-color: white;
+  border-radius: $borderRadius;
+  width: 100%;
+  list-style: none;
+}
