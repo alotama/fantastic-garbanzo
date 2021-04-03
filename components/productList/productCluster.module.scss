@@ -4,14 +4,14 @@
   &:not(:last-child) {
     border-bottom: 1px solid $grey-3;
   }
-  @include media-breakpoint-up($breakpoint-md) {
+  @include media-breakpoint-up($breakpoint-lg) {
     display: flex;
     padding: $space-md 0;
   }
 }
 
 .imageContainer {
-  @include media-breakpoint-up($breakpoint-md) {
+  @include media-breakpoint-up($breakpoint-lg) {
     margin-right: $space-md;
   }
   & > img {
@@ -24,7 +24,7 @@
   width: 100%;
   display: flex;
   flex-flow: wrap-reverse;
-  @include media-breakpoint-up($breakpoint-md) {
+  @include media-breakpoint-up($breakpoint-lg) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
@@ -36,7 +36,7 @@
 
 .extraInfo {
   margin-bottom: $space-md;
-  @include media-breakpoint-up($breakpoint-md) {
+  @include media-breakpoint-up($breakpoint-lg) {
     margin-bottom: 0;
     grid-column: 4/4;
   }

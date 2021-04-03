@@ -2,8 +2,10 @@
 
 .container {
   display: block;
-  @include media-breakpoint-up($breakpoint-md) {
-    display: flex;
+  @include media-breakpoint-up($breakpoint-lg) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: $space-md;
   }
 }
 
@@ -12,17 +14,18 @@
     width: 100%;
     height: auto;
   }
-  @include media-breakpoint-up($breakpoint-md) {
-    margin-right: $space-md;
+  @include media-breakpoint-up($breakpoint-lg) {
+    grid-column: 1/3;
     & > img {
-      width: 42.5rem;
+      width: 100%;
+      max-width: 42.5rem;
       height: auto;
     }
   }
 }
 
 .content {
-  display: block;
+  grid-column: 3/3;
 }
 
 .detail {

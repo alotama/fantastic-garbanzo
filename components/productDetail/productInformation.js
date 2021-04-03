@@ -16,7 +16,7 @@ const productInformation = ({ image, condition, sold_quantity, title, priceThous
             {priceDecimals}
           </span>
         </h2>
-        <button className={productInformationStyles.button}>Comprar</button>
+        <button aria-label="Comprar" className={productInformationStyles.button}>Comprar</button>
       </section>
     </article>
   )

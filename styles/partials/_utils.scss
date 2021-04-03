@@ -1,12 +1,12 @@
 $borderRadius: 0.25rem;
 
 @mixin content-wrapper {
-  grid-column: 2/11;
+  grid-column: 2/12;
 }
 
 @mixin content-container {
   padding: 0 $space-md;
-  @include media-breakpoint-up($breakpoint-md) {
+  @include media-breakpoint-up($breakpoint-lg) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     max-width: 80rem;
