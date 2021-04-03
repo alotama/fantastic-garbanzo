@@ -5,9 +5,10 @@
 }
 
 .imageContainer {
+  margin-right: $space-md;
   & > img {
-    height: 42.5rem;
     width: 42.5rem;
+    height: auto;
   }
 }
 
@@ -19,8 +20,16 @@
   margin-bottom: $space-md;
 }
 
-.title, .price {
+.title{
   margin-bottom: $space-lg;
+  @include font-headering-3;
+  font-weight: 600;
+}
+
+.price {
+  margin-bottom: $space-lg;
+  @include font-headering-1;
+  font-weight: 400;
 }
 
 .button {
@@ -29,5 +38,5 @@
   padding: $space-sm;
   border: none;
   border-radius: $borderRadius;
-  color: white;
+  color: $white;
 }

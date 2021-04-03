@@ -1,10 +1,17 @@
 @import './variables';
 
 html {
+  font-family: Helvetica, Arial, sans-serif;
   background-color: $grey-3;
+  color: $black;
 }
 
-figure, ol, ul {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+figure, ol, ul, p {
   margin: 0;
   padding: 0;
 }

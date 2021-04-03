@@ -16,8 +16,38 @@
   }
 }
 
-.descriptionContainer {
+.informationContainer {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.description {
+  grid-column: 1/3;
+}
+
+.extraInfo {
+  grid-column: 4/4;
+}
+
+.condition {
   display: flex;
-  justify-content: space-between;
+}
+
+.price {
+  @include font-big;
+  font-weight: 400;
+  margin-right: $space-md;
+}
+
+.shipping {
+  & > img {
+    width: 1rem;
+    height: auto;
+  }
+}
+
+.name {
+  @include font-big;
+  font-weight: 400;
 }

@@ -6,9 +6,11 @@
 
 .title {
   @include font-headering-2;
+  font-weight: 400;
   margin-bottom: $space-lg;
 }
 
 .content {
   @include font-body;
+  width: 70%;
 }
