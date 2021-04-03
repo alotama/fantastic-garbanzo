@@ -1,10 +1,25 @@
-import React, { useState, useReducer } from 'react'
+import React, { useState, useEffect } from 'react'
 import searchBarStyle from './searchBar.module.scss'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+const useLocalStorage = localStorageKey => {
+  const [value, setValue] = React.useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem(localStorageKey) || ''
+    };
+  });
+
+  React.useEffect(() => {
+    localStorage.setItem(localStorageKey, value);
+  }, [value]);
+ 
+  return [value, setValue];
+};
+
 const SearchBar = (props) => {
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useLocalStorage('inputValue')
+  
   const router = useRouter()
 
   const searchBarValidation = (e, text) => {
@@ -14,10 +29,14 @@ const SearchBar = (props) => {
     }
   }
 
+  useEffect(() => {
+    localStorage.setItem('inputValue', inputValue);
+  }, [inputValue]);
+
   return (
     <section className={searchBarStyle.wrapper}>
       <div className={'layout__container'}>
-        <article className={'layout__content'}>
+        <article className={`layout__content ${searchBarStyle.container}`}>
           <Link href={'/'}>
             <a className={searchBarStyle.logoContainer}>
               <figure className={searchBarStyle.logoContent}>

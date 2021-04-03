@@ -15,7 +15,7 @@ const getBasicItemFormat = (object) => {
 }
 
 async function FetchSearchData(query) {
-  let testingAPI = await fetch(`${process.env.API_URL}search?q=${query} nano&limit=4`, {
+  let testingAPI = await fetch(`${process.env.API_URL}sites/MLA/search?q=${query} nano&limit=4`, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${process.env.ACCESS_TOKEN}`
@@ -23,12 +23,13 @@ async function FetchSearchData(query) {
   })
 
   let jsonTestingAPI = await testingAPI.json()
-  
-  return cloneObject(jsonTestingAPI)
+
+  return jsonTestingAPI
 }
 
 const getParsedData = async (req, res) => {
-  let clonedSearchResult = await FetchSearchData(req.query.q)
+  let fetchSearchResponse = await FetchSearchData(req.query.q)
+  let clonedSearchResult = cloneObject(fetchSearchResponse)
   const searchResultItems = getBasicItemFormat(clonedSearchResult.results)
 
   const getFilterCategories = clonedSearchResult.available_filters.find(element => element.id === "category")

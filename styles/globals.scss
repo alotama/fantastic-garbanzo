@@ -4,8 +4,9 @@ html {
   background-color: $grey-3;
 }
 
-figure {
+figure, ol, ul {
   margin: 0;
+  padding: 0;
 }
 
 .layout__container {
@@ -19,4 +20,8 @@ figure {
 .layout__main {
   min-height: 100vh;
   height: 100%;
+}
+
+small {
+  @include font-detail;
 }

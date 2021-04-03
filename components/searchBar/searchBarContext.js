@@ -3,25 +3,19 @@ import React from 'react'
 export default React.createContext()
 
 export const InitialReducer = {
-  "error": {
-    "haveError": false,
-    "message": ""
-  }
+  "search": '',
+  "category": []
 }
 
 export const SearchBarReducer = (state, action) => {
   const { type, payload } = action
-  console.log('Reducer ->', {
-    state: state,
-    payload: payload
-  })
   switch (type) {
-    case 'input-vacio':
+    case 'search':
       return {
         ...state,
         ...payload
       }
-    case 'input-completado':
+    case 'select-product':
       return {
         ...state,
         ...payload

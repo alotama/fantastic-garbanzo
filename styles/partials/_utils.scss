@@ -2,7 +2,6 @@ $borderRadius: 0.25rem;
 
 @mixin content-wrapper {
   grid-column: 2/11;
-  display: flex;
 }
 
 @mixin content-container {
@@ -12,4 +11,10 @@ $borderRadius: 0.25rem;
   max-width: 80rem;
   width: 100%;
   margin: 0 auto;
+}
+
+@mixin content-block {
+  background-color: white;
+  border-radius: $borderRadius;
+  width: 100%;
 }

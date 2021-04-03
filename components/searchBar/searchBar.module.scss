@@ -6,6 +6,10 @@
   padding: $space-sm 0; 
 }
 
+.container {
+  display: flex;
+}
+
 .logoContainer {
   margin-right: $space-lg;
 }

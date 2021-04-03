@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+.container {
+  display: flex;
+}
+
+.imageContainer {
+  & > img {
+    height: 42.5rem;
+    width: 42.5rem;
+  }
+}
+
+.content {
+  display: block;
+}
+
+.detail {
+  margin-bottom: $space-md;
+}
+
+.title, .price {
+  margin-bottom: $space-lg;
+}
+
+.button {
+  background-color: $secondary;
+  width: 100%;
+  padding: $space-sm;
+  border: none;
+  border-radius: $borderRadius;
+  color: white;
+}

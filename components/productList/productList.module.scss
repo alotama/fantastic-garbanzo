@@ -1,8 +1,10 @@
 @import '../../styles/variables.scss';
 
-.productClusterContainer {
-  background-color: white;
-  border-radius: $borderRadius;
-  width: 100%;
+.container {
+  @include content-block
+}
+
+.content {
   list-style: none;
+  padding: 0 $space-md;
 }

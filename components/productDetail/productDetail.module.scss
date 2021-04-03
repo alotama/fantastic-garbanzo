@@ -1,0 +1,6 @@
+@import '../../styles/variables.scss';
+
+.container {
+  @include content-block;
+  padding: $space-lg;
+}
