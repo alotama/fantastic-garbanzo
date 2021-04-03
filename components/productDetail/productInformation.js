@@ -1,7 +1,7 @@
 import React from 'react'
 import productInformationStyles from './productInformation.module.scss'
 
-const productInformation = ({ image, condition, sold_quantity, title, price }) => {
+const productInformation = ({ image, condition, sold_quantity, title, priceThousands, priceDecimals }) => {
   return (
     <article className={productInformationStyles.container}>
       <figure className={productInformationStyles.imageContainer}>
@@ -10,7 +10,12 @@ const productInformation = ({ image, condition, sold_quantity, title, price }) =
       <section className={productInformationStyles.content}>
         <small className={productInformationStyles.detail}>{condition} - {sold_quantity}</small>
         <h1 className={productInformationStyles.title}>{title}</h1>
-        <h2 className={productInformationStyles.price}>$ {price}</h2>
+        <h2 className={productInformationStyles.priceThousands}>
+          $ {priceThousands}
+          <span className={productInformationStyles.priceDecimals}>
+            {priceDecimals}
+          </span>
+        </h2>
         <button className={productInformationStyles.button}>Comprar</button>
       </section>
     </article>

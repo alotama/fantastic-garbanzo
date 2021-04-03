@@ -26,10 +26,16 @@
   font-weight: 600;
 }
 
-.price {
+.priceThousands {
   margin-bottom: $space-lg;
   @include font-headering-1;
   font-weight: 400;
+  display: flex;
+}
+
+.priceDecimals {
+ @include font-body;
+ font-weight: 400; 
 }
 
 .button {

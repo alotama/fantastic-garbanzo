@@ -10,7 +10,8 @@ const ProductPage = ({ item, categories }) => {
         condition={item.condition}
         sold_quantity={item.sold_quantity}
         title={item.title}
-        price={item.price.amount}
+        priceThousands={item.price.amount}
+        priceDecimals={item.price.decimals}
         description={item.description}
       />
     </Layout>

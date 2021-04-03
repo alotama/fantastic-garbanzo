@@ -3,11 +3,12 @@ import Layout from '../../components/layout'
 import ProductList from '../../components/productList'
 import Breadcrumb from '../../components/breadcrumb'
 
-const SearchResult = ({ categories, items }) => {
+const SearchResult = ({ categories, items, search }) => {
   return (
     <Layout>
       <Breadcrumb
         steps={categories}
+        search={search}
       />
       <ProductList
         products={items}
@@ -22,6 +23,7 @@ export async function getServerSideProps(params, req, res) {
 
   return {
     props: {
+      search: params.query.search,
       categories: categories,
       items: items
     }

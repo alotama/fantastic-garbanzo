@@ -3,7 +3,7 @@ import ProductInformation from './productInformation'
 import ProductDescription from './ProductDescription'
 import productDetailStyles from './productDetail.module.scss'
 
-const ProductDetail = ({ image, condition, sold_quantity, title, price, description }) => {
+const ProductDetail = ({ image, condition, sold_quantity, title, priceThousands, priceDecimals, description }) => {
   return (
     <section className={productDetailStyles.container}>
       <ProductInformation
@@ -11,7 +11,8 @@ const ProductDetail = ({ image, condition, sold_quantity, title, price, descript
         condition={condition}
         sold_quantity={sold_quantity}
         title={title}
-        price={price}
+        priceThousands={priceThousands}
+        priceDecimals={priceDecimals}
       />
       <ProductDescription
         description={description}
