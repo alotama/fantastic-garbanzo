@@ -1,14 +1,23 @@
 @import '../../styles/variables.scss';
 
 .container {
-  display: flex;
+  display: block;
+  @include media-breakpoint-up($breakpoint-md) {
+    display: flex;
+  }
 }
 
 .imageContainer {
-  margin-right: $space-md;
   & > img {
-    width: 42.5rem;
+    width: 100%;
     height: auto;
+  }
+  @include media-breakpoint-up($breakpoint-md) {
+    margin-right: $space-md;
+    & > img {
+      width: 42.5rem;
+      height: auto;
+    }
   }
 }
 

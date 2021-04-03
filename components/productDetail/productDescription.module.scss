@@ -12,5 +12,9 @@
 
 .content {
   @include font-body;
-  width: 70%;
+  width: 100%;
+  word-break: break-all;
+  @include media-breakpoint-up($breakpoint-md) {
+    width: 70%;
+  }
 }

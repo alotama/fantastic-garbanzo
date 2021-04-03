@@ -1,0 +1,8 @@
+$breakpoint-md: 48rem;
+$breakpoint-lg: 62rem;
+
+@mixin media-breakpoint-up($name) {
+  @media (min-width: $name) {
+    @content;
+  }
+}

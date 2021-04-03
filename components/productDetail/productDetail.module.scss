@@ -3,4 +3,5 @@
 .container {
   @include content-block;
   padding: $space-lg;
+  box-sizing: border-box;
 }

@@ -1,15 +1,19 @@
 @import '../../styles/variables.scss';
 
 .container {
-  display: flex;
-  padding: $space-md 0;
   &:not(:last-child) {
     border-bottom: 1px solid $grey-3;
+  }
+  @include media-breakpoint-up($breakpoint-md) {
+    display: flex;
+    padding: $space-md 0;
   }
 }
 
 .imageContainer {
-  margin-right: $space-md;
+  @include media-breakpoint-up($breakpoint-md) {
+    margin-right: $space-md;
+  }
   & > img {
     height: 11.25rem;
     width: 11.25rem;
@@ -18,8 +22,12 @@
 
 .informationContainer {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-flow: wrap-reverse;
+  @include media-breakpoint-up($breakpoint-md) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .description {
@@ -27,7 +35,11 @@
 }
 
 .extraInfo {
-  grid-column: 4/4;
+  margin-bottom: $space-md;
+  @include media-breakpoint-up($breakpoint-md) {
+    margin-bottom: 0;
+    grid-column: 4/4;
+  }
 }
 
 .condition {

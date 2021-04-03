@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .container {
-  @include content-block
+  @include content-block;
 }
 
 .content {
