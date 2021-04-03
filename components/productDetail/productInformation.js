@@ -5,7 +5,7 @@ const productInformation = ({ image, condition, sold_quantity, title, priceThous
   return (
     <article className={productInformationStyles.container}>
       <figure className={productInformationStyles.imageContainer}>
-        <img src={image} />
+        <img src={image} alt={title} width={680} height={'auto'} />
       </figure>
       <section className={productInformationStyles.content}>
         <small className={productInformationStyles.detail}>{condition} - {sold_quantity}</small>

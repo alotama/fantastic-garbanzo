@@ -1,10 +1,14 @@
 import React from 'react';
 import Layout from '../../../components/layout'
 import ProductDetail from '../../../components/productDetail';
+import Head from 'next/head'
 
 const ProductPage = ({ item, categories }) => {
   return (
-    <Layout>
+    <Layout title={item.title}>
+      <Head>
+        <meta name={"description"} content={item.description}/>
+      </Head>
       <ProductDetail
         image={item.picture}
         condition={item.condition}

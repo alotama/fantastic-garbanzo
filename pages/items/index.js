@@ -5,7 +5,7 @@ import Breadcrumb from '../../components/breadcrumb'
 
 const SearchResult = ({ categories, items, search }) => {
   return (
-    <Layout>
+    <Layout title={'search'}>
       <Breadcrumb
         steps={categories}
         search={search}
