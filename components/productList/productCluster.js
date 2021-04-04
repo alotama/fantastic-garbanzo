@@ -20,11 +20,12 @@ const ProductCluster = ({ title, id, image, price, location, free_shipping }) =>
             <article className={ProductClusterStyles.description}>
               <div className={ProductClusterStyles.condition}>
                 <p className={ProductClusterStyles.price}>$ {price}</p>
-                {free_shipping && 
+                {free_shipping &&
                   <figure className={ProductClusterStyles.shipping}>
                     <img
                       src={'/ic_shipping.png'}
                       srcSet={'/ic_shipping@2x.png'}
+                      alt={'Envío gratis'}
                     />
                   </figure>
                 }

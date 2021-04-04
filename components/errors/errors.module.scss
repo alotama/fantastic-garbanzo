@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+
+.container {
+  @include content-block;
+  padding: $space-lg;
+  box-sizing: content-box;
+  margin-top: $space-lg;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.title {
+  @include font-headering-2;
+  font-weight: 600;
+  margin-bottom: $space-md;
+}
+
+.content {
+  @include font-big;
+}

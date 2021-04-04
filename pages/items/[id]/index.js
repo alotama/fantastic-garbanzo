@@ -1,14 +1,19 @@
 import React from 'react';
 import Layout from '../../../components/layout'
 import ProductDetail from '../../../components/productDetail';
-import Head from 'next/head'
 
-const ProductPage = ({ item, categories }) => {
+const ProductPage = ({ id, item, errorCode }) => {
+  if (errorCode) {
+    return <Error statusCode={errorCode} />
+  }
+
   return (
-    <Layout title={item.title}>
-      <Head>
-        <meta name={"description"} content={item.description}/>
-      </Head>
+    <Layout
+      title={item.title}
+      pageURL={`items/${id}`}
+      description={item.description}
+      picture={item.picture}
+    >
       <ProductDetail
         image={item.picture}
         condition={item.condition}
@@ -23,12 +28,37 @@ const ProductPage = ({ item, categories }) => {
 }
 
 export async function getServerSideProps(params, req, res) {
-  const response = await fetch(`http://localhost:3000/api/items/${params.query.id}`)
-  const { item } = await response.json()
+  try {
+    const response = await fetch(`${process.env.SITE_URL}/api/items/${params.query.id}`)
+    if (response.status === 200) {
+      const { item } = await response.json()
 
-  return {
-    props: {
-      item: item
+      return {
+        props: {
+          id: params.query.id,
+          item: item
+        }
+      }
+    } else {
+      throw {
+        status: response.status,
+        response: await response.json()
+      }
+    }
+  } catch (er) {
+    console.error({
+      "message": "No se obtuvo una respuesta de la API que obtiene el detalle del producto que se buscó",
+      "error": "productPage_error_api",
+      "status": er.status,
+      "cause": [er.response],
+    })
+
+    return {
+      props: {
+        id: params.query.id,
+        item: er.response.item,
+        errorCode: er.status
+      }
     }
   }
 }

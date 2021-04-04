@@ -56,3 +56,7 @@ export const productTemplate = {
   "free_shipping": "",
   "picture": "",
 }
+
+export const capitalizeFirstLetter = (string) => {
+  return string.replace(/^\w/, (c) => c.toUpperCase())
+}
