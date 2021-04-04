@@ -18,29 +18,29 @@ const getBasicItemFormat = (object) => {
   }, [])
 }
 
-async function getSearchResult(query) {
-  const searchDataCache = searchCache.get("searchData")
+const getSearchResult = async (query) => {
+  const searchResultCache = searchCache.get("searchResult")
 
-  if (searchDataCache && searchDataCache.query === query) {
+  if (searchResultCache && searchResultCache.query === query) {
     console.log('cache')
-    return searchDataCache
+    return searchResultCache
   } else {
     console.log('fetch')
     try {
-      let searchResultResponse = await fetch(`${process.env.API_URL}sites/MLA/search?q=${query}&nano&limit=4`, {
+      let getSearchResultResponse = await fetch(`${process.env.API_URL}sites/MLA/search?q=${query}&nano&limit=4`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${process.env.ACCESS_TOKEN}`
         }
       })
 
-      let searchResult = await searchResultResponse
-      if (searchResult.status === 200) {        
-        const searchResultJSON = searchResult.json()
-        searchCache.set('searchData', searchResultJSON)
-        return searchResultJSON;
+      let searchResultResponse = await getSearchResultResponse
+      if (searchResultResponse.status === 200) {        
+        const searchResult = searchResultResponse.json()
+        searchCache.set('searchResult', searchResult)
+        return searchResult;
       } else {
-        throw searchResult
+        throw searchResultResponse
       }
     } catch (er) {
       console.error({

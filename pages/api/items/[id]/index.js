@@ -7,7 +7,7 @@ const CACHE_TTL = 9000
 const CHECK_PERIOD = 10000
 const productPageCache = new NodeCache({ stdTTL: CACHE_TTL, checkperiod: CHECK_PERIOD });
 
-async function FetchProductData(query) {
+const FetchProductData = async (query) => {
   const productCache = productPageCache.mget(["productData"])
   if (productCache && productCache.productData && productCache.productData.id === query) {
     console.log('cache productData')
@@ -15,20 +15,20 @@ async function FetchProductData(query) {
   } else {
     console.log('fetch Data')
     try {
-      let testingAPI = await fetch(`${process.env.API_URL}items/${query}`, {
+      let getProductDataResponse = await fetch(`${process.env.API_URL}items/${query}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${process.env.ACCESS_TOKEN}`
         }
       })
 
-      let jsonTestingAPI = await testingAPI
-      if (jsonTestingAPI.status === 200) {
-        const daleProductData = jsonTestingAPI.json()
-        productPageCache.mset([{ key: 'productData', val: daleProductData }])
-        return daleProductData
+      let productDataResponse = await getProductDataResponse
+      if (productDataResponse.status === 200) {
+        const productData = productDataResponse.json()
+        productPageCache.mset([{ key: 'productData', val: productData }])
+        return productData
       } else {
-        throw jsonTestingAPI
+        throw productDataResponse
       }
 
     } catch (e) {
@@ -42,29 +42,32 @@ async function FetchProductData(query) {
   }
 }
 
-async function FetchProductDescription(query) {
+const FetchProductDescription = async (query) => {
   const productCache = productPageCache.mget(["productDescription"])
+
   if (productCache && productCache.productDescription && productCache.productDescription.query === query) {
     console.log('cache productDescription')
+
     return productCache.productDescription
   } else {
     console.log('fetch Description')
+
     try {
-      let testingAPI = await fetch(`${process.env.API_URL}items/${query}/description`, {
+      let getProductDescriptionResponse = await fetch(`${process.env.API_URL}items/${query}/description`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${process.env.ACCESS_TOKEN}`
         }
       })
       
-      let testingAPIResponse = await testingAPI
-      if (testingAPIResponse.status === 200) { 
-        let daleQueVa = testingAPIResponse.json()
-        daleQueVa.query = query
-        productPageCache.mset([{ key: 'productDescription', val: daleQueVa }])
-        return daleQueVa
+      let productDescriptionResponse = await getProductDescriptionResponse
+      if (productDescriptionResponse.status === 200) { 
+        let productDescription = productDescriptionResponse.json()
+        productDescription.query = query
+        productPageCache.mset([{ key: 'productDescription', val: productDescription }])
+        return productDescription
       } else {
-        throw testingAPIResponse
+        throw productDescriptionResponse
       }
     } catch (e) {
       console.error({
@@ -88,7 +91,7 @@ const getTranslatedCondition = (condition) => {
   }
 }
 
-const getParsedProductData = async (req, res) => {
+const getParsedProductPage = async (req, res) => {
   let parsedProductData = {
     author,
     "item": productTemplate
@@ -122,4 +125,4 @@ const getParsedProductData = async (req, res) => {
   }
 }
 
-export default getParsedProductData;
+export default getParsedProductPage;
