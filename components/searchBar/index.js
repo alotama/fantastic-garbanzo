@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import searchBarStyle from './searchBar.module.scss'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import React, { useState, useEffect } from 'react';
+import searchBarStyle from './searchBar.module.scss';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const useLocalStorage = localStorageKey => {
   const [value, setValue] = React.useState(() => {
@@ -51,6 +51,7 @@ const SearchBar = (props) => {
           </Link>
           <form className={searchBarStyle.searchContainer}>
             <input
+              data-testid={'use-input-searchbar'}
               className={searchBarStyle.searchInput}
               type={'text'}
               placeholder={'Nunca dejes de buscar'}
@@ -58,6 +59,8 @@ const SearchBar = (props) => {
               onChange={(e) => setInputValue(e.target.value)}
             />
             <button
+              data-testid={'use-button-searchbar'}
+              type="submit"
               className={searchBarStyle.searchButtonContainer}
               onClick={(e) => searchBarValidation(e, inputValue)}
             >
