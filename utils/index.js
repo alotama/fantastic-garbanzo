@@ -22,7 +22,6 @@ export const getAsignedPropertyToProductTemplate = (template, object, picture) =
   template.price.currency = object.currency_id
   template.price.amount = getPriceThousands(object.price)
   template.price.decimals = getPriceDecimals(object.price)
-  template.free_shipping = object.shipping.free_shipping
 
   switch (picture) {
     case "productDetail":
@@ -53,7 +52,6 @@ export const productTemplate = {
     "amount": "",
     "decimals": ""
   },
-  "free_shipping": "",
   "picture": "",
 }
 

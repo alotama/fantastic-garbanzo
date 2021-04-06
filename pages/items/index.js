@@ -31,14 +31,20 @@ export async function getServerSideProps(params, req, res) {
     const response = await fetch(`${process.env.SITE_URL}/api/items?q=${params.query.search}`)
     if (response.status === 200) {      
       const { categories, items } = await response.json()
-  
-  
-      return {
-        props: {
-          search: capitalizeFirstLetter(params.query.search),
-          categories: categories,
-          items: items
+      
+      if (params.query.search) {        
+        return {
+          props: {
+            search: capitalizeFirstLetter(params.query.search),
+            categories: categories,
+            items: items
+          }
         }
+      } else {
+        throw {
+          status: response.status,
+          response: params.query
+        };
       }
     } else {
       throw {

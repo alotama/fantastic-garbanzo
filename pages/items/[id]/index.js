@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../../components/layout'
 import ProductDetail from '../../../components/productDetail';
+import Breadcrumb from '../../../components/breadcrumb'
 
 const ProductPage = ({ id, item, errorCode }) => {
   if (errorCode) {
@@ -14,6 +15,10 @@ const ProductPage = ({ id, item, errorCode }) => {
       description={item.description}
       picture={item.picture}
     >
+      <Breadcrumb
+        steps={item.categories}
+        search={id}
+      />
       <ProductDetail
         image={item.picture}
         condition={item.condition}

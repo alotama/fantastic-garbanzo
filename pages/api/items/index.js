@@ -11,6 +11,7 @@ const getBasicItemFormat = (object) => {
   return object.reduce((acc, element) => {
     let asignedProductTemplate = getAsignedPropertyToProductTemplate(clonedProductTemplate, element)
     asignedProductTemplate.location = element.address.state_name
+    asignedProductTemplate.free_shipping = element.shipping.free_shipping
     return [
       ...acc,
       cloneObject(asignedProductTemplate)
@@ -73,6 +74,10 @@ const getParsedSearchResultData = async (req, res) => {
       const sortedCategories = getFilterCategories.values.sort((pre, post) => parseFloat(post.results) - parseFloat(pre.results))
       breadcrumbSearchResult = sortedCategories.map(element => element.name)
     }
+    // searchResultItems.free_shipping = clonedSearchResult.results.map(product => {
+    //   console.log('product ->', product.shipping.free_shipping)
+    //   return product.shipping.free_shipping
+    // })
   
     parsedSearchResult = {
       "categories": breadcrumbSearchResult,
