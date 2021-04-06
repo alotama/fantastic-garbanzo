@@ -1,0 +1,73 @@
+{
+	"categories": [
+		"Vehículos de Juguete",
+		"Hobbies",
+		"Juguetes para Bebés",
+		"Otros",
+		"Juegos de Mesa y Cartas",
+		"Muñecos y Muñecas",
+		"Juguetes de Construcción",
+		"Vehículos Montables para Niños",
+		"Instrumentos Musicales",
+		"Juegos de Agua y Playa",
+		"Electrónicos para Niños",
+		"Figuritas, Álbumes y Cromos",
+		"Peloteros y Castillos",
+		"Arte y Manualidades",
+		"Peluches",
+		"Juguetes Antiestrés e Ingenio",
+		"Juegos de Plaza y Aire Libre",
+		"Casas y Carpas para Niños",
+		"Títeres y Marionetas"
+	],
+	"items": [
+		{
+			"id": "MLA849327961",
+			"title": "Tren A Pila Clásico Con Luces Y Sonido El Duende Azul Full",
+			"price": {
+				"currency": "ARS",
+				"amount": "3.199",
+				"decimals": "00"
+			},
+			"free_shipping": false,
+			"picture": "http://http2.mlstatic.com/D_895543-MLA31884587050_082019-I.jpg",
+			"location": "Capital Federal"
+		},
+		{
+			"id": "MLA858578667",
+			"title": "Pista Tren Bala 225 Cm - Tren 42 Cm Luz Y Control Velocidad ",
+			"price": {
+				"currency": "ARS",
+				"amount": "4.528",
+				"decimals": "00"
+			},
+			"free_shipping": true,
+			"picture": "http://http2.mlstatic.com/D_893067-MLA41989504814_052020-I.jpg",
+			"location": "Buenos Aires"
+		},
+		{
+			"id": "MLA884249591",
+			"title": "Tren Fenfa Escala",
+			"price": {
+				"currency": "ARS",
+				"amount": "4.789",
+				"decimals": "00"
+			},
+			"free_shipping": true,
+			"picture": "http://http2.mlstatic.com/D_636214-MLA45201223735_032021-I.jpg",
+			"location": "Buenos Aires"
+		},
+		{
+			"id": "MLA862645070",
+			"title": "Tren Madera Grande Bloques Construccion Locomotora Calidad ",
+			"price": {
+				"currency": "ARS",
+				"amount": "2.249",
+				"decimals": "00"
+			},
+			"free_shipping": false,
+			"picture": "http://http2.mlstatic.com/D_906009-MLA42231554754_062020-I.jpg",
+			"location": "Capital Federal"
+		}
+	]
+}

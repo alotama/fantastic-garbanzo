@@ -18,7 +18,7 @@ const getBasicItemFormat = (object) => {
   }, [])
 }
 
-const getSearchResult = async (query) => {
+export const getSearchResult = async (query) => {
   const searchResultCache = searchCache.get("searchResult")
 
   if (searchResultCache && searchResultCache.query === query) {
@@ -34,7 +34,9 @@ const getSearchResult = async (query) => {
         }
       })
 
+      
       let searchResultResponse = await getSearchResultResponse
+      
       if (searchResultResponse.status === 200) {        
         const searchResult = searchResultResponse.json()
         searchCache.set('searchResult', searchResult)
@@ -53,7 +55,7 @@ const getSearchResult = async (query) => {
   }
 }
 
-const getParsedData = async (req, res) => {
+const getParsedSearchResultData = async (req, res) => {
   let breadcrumbSearchResult = []
   let parsedSearchResult = {
     author,
@@ -78,6 +80,7 @@ const getParsedData = async (req, res) => {
     }
   
     res.status(200).json(parsedSearchResult)
+    return parsedSearchResult;
   } catch (e) {
     console.error({
       "message": "No se pudo parsear correctamente la respuesta de la API",
@@ -93,4 +96,4 @@ const getParsedData = async (req, res) => {
   }
 }
 
-export default getParsedData;
+export default getParsedSearchResultData;

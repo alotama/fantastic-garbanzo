@@ -1,0 +1,1604 @@
+{
+    "site_id": "MLA",
+    "query": "tren",
+    "paging": {
+      "total": 6863,
+      "primary_results": 1000,
+      "offset": 0,
+      "limit": 4
+    },
+    "results": [
+      {
+        "id": "MLA849327961",
+        "site_id": "MLA",
+        "title": "Tren A Pila Clásico Con Luces Y Sonido El Duende Azul Full",
+        "seller": {
+          "id": 75694306,
+          "permalink": "http://perfil.mercadolibre.com.ar/JUGUETERIA+CEBRA",
+          "registration_date": "2009-05-06T17:20:45.000-04:00",
+          "car_dealer": false,
+          "real_estate_agency": false,
+          "tags": [
+            "brand",
+            "user_info_verified",
+            "large_seller",
+            "eshop",
+            "mshops",
+            "messages_as_seller",
+            "messages_as_buyer"
+          ],
+          "eshop": {
+            "nick_name": "JUGUETERIA CEBRA",
+            "eshop_rubro": null,
+            "eshop_id": 307248,
+            "eshop_locations": [
+            ],
+            "site_id": "MLA",
+            "eshop_logo_url": "http://resources.mlstatic.com/eshops/75694306v2da30d.png",
+            "eshop_status_id": 1,
+            "seller": 75694306,
+            "eshop_experience": 0
+          },
+          "seller_reputation": {
+            "transactions": {
+              "total": 195907,
+              "canceled": 7433,
+              "period": "historic",
+              "ratings": {
+                "negative": 0.03,
+                "positive": 0.96,
+                "neutral": 0.01
+              },
+              "completed": 188474
+            },
+            "power_seller_status": "platinum",
+            "metrics": {
+              "claims": {
+                "rate": 0.0059,
+                "value": 55,
+                "period": "60 days"
+              },
+              "delayed_handling_time": {
+                "rate": 0.0011,
+                "value": 10,
+                "period": "60 days"
+              },
+              "sales": {
+                "period": "60 days",
+                "completed": 8944
+              },
+              "cancellations": {
+                "rate": 0.0025,
+                "value": 24,
+                "period": "60 days"
+              }
+            },
+            "level_id": "5_green"
+          }
+        },
+        "price": 3199,
+        "prices": {
+          "id": "MLA849327961",
+          "prices": [
+            {
+              "id": "8",
+              "type": "standard",
+              "conditions": {
+                "context_restrictions": [
+                ],
+                "start_time": null,
+                "end_time": null,
+                "eligible": true
+              },
+              "amount": 3199,
+              "regular_amount": null,
+              "currency_id": "ARS",
+              "exchange_rate_context": "DEFAULT",
+              "metadata": {
+              },
+              "last_updated": "2021-03-30T01:11:35Z"
+            }
+          ],
+          "presentation": {
+            "display_currency": "ARS"
+          },
+          "payment_method_prices": [
+          ],
+          "reference_prices": [
+          ],
+          "purchase_discounts": [
+          ]
+        },
+        "sale_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 500,
+        "buying_mode": "buy_it_now",
+        "listing_type_id": "gold_special",
+        "stop_time": "2040-04-09T04:00:00.000Z",
+        "condition": "new",
+        "permalink": "https://articulo.mercadolibre.com.ar/MLA-849327961-tren-a-pila-clasico-con-luces-y-sonido-el-duende-azul-full-_JM",
+        "thumbnail": "http://http2.mlstatic.com/D_895543-MLA31884587050_082019-I.jpg",
+        "thumbnail_id": "895543-MLA31884587050_082019",
+        "accepts_mercadopago": true,
+        "installments": {
+          "quantity": 12,
+          "amount": 453.64,
+          "rate": 70.17,
+          "currency_id": "ARS"
+        },
+        "address": {
+          "state_id": "AR-C",
+          "state_name": "Capital Federal",
+          "city_id": "TUxBQk1PTjUxOTJa",
+          "city_name": "Monserrat"
+        },
+        "shipping": {
+          "free_shipping": false,
+          "mode": "me2",
+          "tags": [
+            "self_service_in"
+          ],
+          "logistic_type": "cross_docking",
+          "store_pick_up": false
+        },
+        "seller_address": {
+          "id": "",
+          "comment": "",
+          "address_line": "",
+          "zip_code": "",
+          "country": {
+            "id": "AR",
+            "name": "Argentina"
+          },
+          "state": {
+            "id": "AR-C",
+            "name": "Capital Federal"
+          },
+          "city": {
+            "id": "TUxBQk1PTjUxOTJa",
+            "name": "Monserrat"
+          },
+          "latitude": "",
+          "longitude": ""
+        },
+        "attributes": [
+          {
+            "attribute_group_id": "OTHERS",
+            "source": 2860837171021627,
+            "value_struct": null,
+            "values": [
+              {
+                "id": "935424",
+                "name": "El Duende Azul",
+                "struct": null,
+                "source": 2860837171021627
+              }
+            ],
+            "attribute_group_name": "Otros",
+            "id": "BRAND",
+            "name": "Marca",
+            "value_id": "935424",
+            "value_name": "El Duende Azul"
+          },
+          {
+            "name": "Condición del ítem",
+            "value_name": "Nuevo",
+            "value_struct": null,
+            "attribute_group_name": "Otros",
+            "id": "ITEM_CONDITION",
+            "value_id": "2230284",
+            "values": [
+              {
+                "id": "2230284",
+                "name": "Nuevo",
+                "struct": null,
+                "source": 2860837171021627
+              }
+            ],
+            "attribute_group_id": "OTHERS",
+            "source": 2860837171021627
+          },
+          {
+            "attribute_group_name": "Otros",
+            "name": "Modelo",
+            "value_struct": null,
+            "values": [
+              {
+                "id": "6635232",
+                "name": "Tren Clásico",
+                "struct": null,
+                "source": 2860837171021627
+              }
+            ],
+            "attribute_group_id": "OTHERS",
+            "source": 2860837171021627,
+            "id": "MODEL",
+            "value_id": "6635232",
+            "value_name": "Tren Clásico"
+          },
+          {
+            "attribute_group_name": "Otros",
+            "id": "PACKAGE_LENGTH",
+            "name": "Largo del paquete",
+            "value_id": null,
+            "values": [
+              {
+                "struct": {
+                  "number": 32.8,
+                  "unit": "cm"
+                },
+                "source": 4333789534002961,
+                "id": null,
+                "name": "32.8 cm"
+              }
+            ],
+            "value_name": "32.8 cm",
+            "value_struct": {
+              "number": 32.8,
+              "unit": "cm"
+            },
+            "attribute_group_id": "OTHERS",
+            "source": 4333789534002961
+          },
+          {
+            "name": "Peso del paquete",
+            "value_id": null,
+            "value_name": "740 g",
+            "attribute_group_id": "OTHERS",
+            "id": "PACKAGE_WEIGHT",
+            "value_struct": {
+              "number": 740,
+              "unit": "g"
+            },
+            "values": [
+              {
+                "id": null,
+                "name": "740 g",
+                "struct": {
+                  "unit": "g",
+                  "number": 740
+                },
+                "source": 4333789534002961
+              }
+            ],
+            "attribute_group_name": "Otros",
+            "source": 4333789534002961
+          }
+        ],
+        "original_price": null,
+        "category_id": "MLA38493",
+        "official_store_id": 781,
+        "domain_id": "MLA-TOY_TRAINS",
+        "catalog_product_id": "MLA14155309",
+        "tags": [
+          "brand_verified",
+          "good_quality_picture",
+          "good_quality_thumbnail",
+          "loyalty_discount_eligible",
+          "immediate_payment",
+          "cart_eligible",
+          "shipping_guaranteed",
+          "best_seller_candidate"
+        ],
+        "order_backend": 1,
+        "use_thumbnail_id": true
+      },
+      {
+        "id": "MLA858578667",
+        "site_id": "MLA",
+        "title": "Pista Tren Bala 225 Cm - Tren 42 Cm Luz Y Control Velocidad ",
+        "seller": {
+          "id": 169322259,
+          "permalink": "http://perfil.mercadolibre.com.ar/VINNERE",
+          "registration_date": "2014-10-21T19:20:18.000-04:00",
+          "car_dealer": false,
+          "real_estate_agency": false,
+          "tags": [
+            "normal",
+            "user_info_verified",
+            "mshops",
+            "credits_profile",
+            "messages_as_seller",
+            "messages_as_buyer"
+          ],
+          "seller_reputation": {
+            "transactions": {
+              "total": 3635,
+              "canceled": 117,
+              "period": "historic",
+              "ratings": {
+                "negative": 0.02,
+                "positive": 0.98,
+                "neutral": 0
+              },
+              "completed": 3518
+            },
+            "power_seller_status": "gold",
+            "metrics": {
+              "claims": {
+                "rate": 0,
+                "value": 1,
+                "period": "60 days"
+              },
+              "delayed_handling_time": {
+                "rate": 0.0082,
+                "value": 2,
+                "period": "60 days"
+              },
+              "sales": {
+                "period": "60 days",
+                "completed": 250
+              },
+              "cancellations": {
+                "rate": 0,
+                "value": 0,
+                "period": "60 days"
+              }
+            },
+            "level_id": "5_green"
+          }
+        },
+        "price": 4528,
+        "prices": {
+          "id": "MLA858578667",
+          "prices": [
+            {
+              "id": "10",
+              "type": "standard",
+              "conditions": {
+                "context_restrictions": [
+                ],
+                "start_time": null,
+                "end_time": null,
+                "eligible": true
+              },
+              "amount": 4528,
+              "regular_amount": null,
+              "currency_id": "ARS",
+              "exchange_rate_context": "DEFAULT",
+              "metadata": {
+              },
+              "last_updated": "2021-03-31T00:01:44Z"
+            }
+          ],
+          "presentation": {
+            "display_currency": "ARS"
+          },
+          "payment_method_prices": [
+          ],
+          "reference_prices": [
+            {
+              "id": "8",
+              "type": "was",
+              "conditions": {
+                "context_restrictions": [
+                ],
+                "start_time": "2021-03-16T05:10:43Z",
+                "end_time": "2021-03-19T05:10:43Z",
+                "eligible": true
+              },
+              "amount": 3889.62,
+              "currency_id": "ARS",
+              "exchange_rate_context": "DEFAULT",
+              "tags": [
+              ],
+              "last_updated": "2021-03-16T05:10:43Z"
+            }
+          ],
+          "purchase_discounts": [
+          ]
+        },
+        "sale_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 150,
+        "buying_mode": "buy_it_now",
+        "listing_type_id": "gold_special",
+        "stop_time": "2040-07-14T14:03:04.000Z",
+        "condition": "new",
+        "permalink": "https://articulo.mercadolibre.com.ar/MLA-858578667-pista-tren-bala-225-cm-tren-42-cm-luz-y-control-velocidad-_JM",
+        "thumbnail": "http://http2.mlstatic.com/D_893067-MLA41989504814_052020-I.jpg",
+        "thumbnail_id": "893067-MLA41989504814_052020",
+        "accepts_mercadopago": true,
+        "installments": {
+          "quantity": 12,
+          "amount": 642.11,
+          "rate": 70.17,
+          "currency_id": "ARS"
+        },
+        "address": {
+          "state_id": "AR-B",
+          "state_name": "Buenos Aires",
+          "city_id": null,
+          "city_name": "Villa Ballester"
+        },
+        "shipping": {
+          "free_shipping": true,
+          "mode": "me2",
+          "tags": [
+            "fulfillment",
+            "self_service_in",
+            "mandatory_free_shipping"
+          ],
+          "logistic_type": "fulfillment",
+          "store_pick_up": false
+        },
+        "seller_address": {
+          "id": "",
+          "comment": "",
+          "address_line": "",
+          "zip_code": "",
+          "country": {
+            "id": "AR",
+            "name": "Argentina"
+          },
+          "state": {
+            "id": "AR-B",
+            "name": "Buenos Aires"
+          },
+          "city": {
+            "id": null,
+            "name": "Villa Ballester"
+          },
+          "latitude": "",
+          "longitude": ""
+        },
+        "attributes": [
+          {
+            "value_struct": null,
+            "values": [
+              {
+                "id": "1141031",
+                "name": "La Le Lu",
+                "struct": null,
+                "source": 6808261514773724
+              }
+            ],
+            "name": "Marca",
+            "value_id": "1141031",
+            "value_name": "La Le Lu",
+            "attribute_group_id": "OTHERS",
+            "attribute_group_name": "Otros",
+            "source": 6808261514773724,
+            "id": "BRAND"
+          },
+          {
+            "name": "Condición del ítem",
+            "value_id": "2230284",
+            "value_struct": null,
+            "attribute_group_id": "OTHERS",
+            "id": "ITEM_CONDITION",
+            "value_name": "Nuevo",
+            "values": [
+              {
+                "name": "Nuevo",
+                "struct": null,
+                "source": 6808261514773724,
+                "id": "2230284"
+              }
+            ],
+            "attribute_group_name": "Otros",
+            "source": 6808261514773724
+          },
+          {
+            "value_id": "6710",
+            "value_struct": null,
+            "values": [
+              {
+                "id": "6710",
+                "name": "8400",
+                "struct": null,
+                "source": 6808261514773724
+              }
+            ],
+            "source": 6808261514773724,
+            "attribute_group_name": "Otros",
+            "id": "MODEL",
+            "name": "Modelo",
+            "value_name": "8400",
+            "attribute_group_id": "OTHERS"
+          },
+          {
+            "value_id": null,
+            "value_name": "29 cm",
+            "attribute_group_id": "OTHERS",
+            "attribute_group_name": "Otros",
+            "source": 4333789534002961,
+            "name": "Largo del paquete",
+            "value_struct": {
+              "unit": "cm",
+              "number": 29
+            },
+            "values": [
+              {
+                "name": "29 cm",
+                "struct": {
+                  "unit": "cm",
+                  "number": 29
+                },
+                "source": 4333789534002961,
+                "id": null
+              }
+            ],
+            "id": "PACKAGE_LENGTH"
+          },
+          {
+            "value_struct": {
+              "number": 1060,
+              "unit": "g"
+            },
+            "values": [
+              {
+                "id": null,
+                "name": "1060 g",
+                "struct": {
+                  "number": 1060,
+                  "unit": "g"
+                },
+                "source": 4333789534002961
+              }
+            ],
+            "attribute_group_name": "Otros",
+            "attribute_group_id": "OTHERS",
+            "source": 4333789534002961,
+            "id": "PACKAGE_WEIGHT",
+            "name": "Peso del paquete",
+            "value_id": null,
+            "value_name": "1060 g"
+          }
+        ],
+        "original_price": null,
+        "category_id": "MLA38493",
+        "official_store_id": null,
+        "domain_id": "MLA-TOY_TRAINS",
+        "catalog_product_id": null,
+        "tags": [
+          "good_quality_picture",
+          "good_quality_thumbnail",
+          "loyalty_discount_eligible",
+          "brand_verified",
+          "immediate_payment",
+          "cart_eligible",
+          "shipping_guaranteed",
+          "best_seller_candidate"
+        ],
+        "order_backend": 2,
+        "use_thumbnail_id": true
+      },
+      {
+        "id": "MLA884249591",
+        "site_id": "MLA",
+        "title": "Tren Fenfa Escala",
+        "seller": {
+          "id": 146319123,
+          "permalink": "http://perfil.mercadolibre.com.ar/COLINCHO2222",
+          "registration_date": "2013-09-24T13:10:37.000-04:00",
+          "car_dealer": false,
+          "real_estate_agency": false,
+          "tags": [
+            "normal",
+            "user_info_verified",
+            "credits_profile",
+            "messages_as_seller",
+            "messages_as_buyer"
+          ],
+          "seller_reputation": {
+            "transactions": {
+              "total": 83,
+              "canceled": 6,
+              "period": "historic",
+              "ratings": {
+                "negative": 0,
+                "positive": 1,
+                "neutral": 0
+              },
+              "completed": 77
+            },
+            "power_seller_status": null,
+            "metrics": {
+              "claims": {
+                "rate": 0,
+                "value": 0,
+                "period": "365 days"
+              },
+              "delayed_handling_time": {
+                "rate": 0.041,
+                "value": 3,
+                "period": "365 days"
+              },
+              "sales": {
+                "period": "365 days",
+                "completed": 77
+              },
+              "cancellations": {
+                "rate": 0,
+                "value": 1,
+                "period": "365 days"
+              }
+            },
+            "level_id": "5_green"
+          }
+        },
+        "price": 4789,
+        "prices": {
+          "id": "MLA884249591",
+          "prices": [
+            {
+              "id": "7",
+              "type": "standard",
+              "conditions": {
+                "context_restrictions": [
+                ],
+                "start_time": null,
+                "end_time": null,
+                "eligible": true
+              },
+              "amount": 4789,
+              "regular_amount": null,
+              "currency_id": "ARS",
+              "exchange_rate_context": "DEFAULT",
+              "metadata": {
+              },
+              "last_updated": "2021-03-15T12:35:13Z"
+            }
+          ],
+          "presentation": {
+            "display_currency": "ARS"
+          },
+          "payment_method_prices": [
+          ],
+          "reference_prices": [
+          ],
+          "purchase_discounts": [
+          ]
+        },
+        "sale_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 4,
+        "buying_mode": "buy_it_now",
+        "listing_type_id": "gold_special",
+        "stop_time": "2041-02-01T03:10:39.000Z",
+        "condition": "new",
+        "permalink": "https://articulo.mercadolibre.com.ar/MLA-884249591-tren-fenfa-escala-_JM",
+        "thumbnail": "http://http2.mlstatic.com/D_636214-MLA45201223735_032021-I.jpg",
+        "thumbnail_id": "636214-MLA45201223735_032021",
+        "accepts_mercadopago": true,
+        "installments": {
+          "quantity": 12,
+          "amount": 679.12,
+          "rate": 70.17,
+          "currency_id": "ARS"
+        },
+        "address": {
+          "state_id": "AR-B",
+          "state_name": "Buenos Aires",
+          "city_id": "TUxBQ0JFUjYyYWU3",
+          "city_name": "Berazategui"
+        },
+        "shipping": {
+          "free_shipping": true,
+          "mode": "me2",
+          "tags": [
+            "self_service_in",
+            "mandatory_free_shipping"
+          ],
+          "logistic_type": "xd_drop_off",
+          "store_pick_up": false
+        },
+        "seller_address": {
+          "id": "",
+          "comment": "",
+          "address_line": "",
+          "zip_code": "",
+          "country": {
+            "id": "AR",
+            "name": "Argentina"
+          },
+          "state": {
+            "id": "AR-B",
+            "name": "Buenos Aires"
+          },
+          "city": {
+            "id": "TUxBQ0JFUjYyYWU3",
+            "name": "Berazategui"
+          },
+          "latitude": "",
+          "longitude": ""
+        },
+        "attributes": [
+          {
+            "attribute_group_id": "OTHERS",
+            "attribute_group_name": "Otros",
+            "id": "BRAND",
+            "value_id": "4988427",
+            "value_name": "Fenfa",
+            "source": 7092,
+            "name": "Marca",
+            "value_struct": null,
+            "values": [
+              {
+                "source": 7092,
+                "id": "4988427",
+                "name": "Fenfa",
+                "struct": null
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "id": "2230284",
+                "name": "Nuevo",
+                "struct": null,
+                "source": 7092
+              }
+            ],
+            "attribute_group_name": "Otros",
+            "id": "ITEM_CONDITION",
+            "value_struct": null,
+            "value_name": "Nuevo",
+            "attribute_group_id": "OTHERS",
+            "source": 7092,
+            "name": "Condición del ítem",
+            "value_id": "2230284"
+          },
+          {
+            "value_id": null,
+            "value_name": "Vapor antiguo",
+            "attribute_group_id": "OTHERS",
+            "attribute_group_name": "Otros",
+            "source": 7092,
+            "id": "MODEL",
+            "name": "Modelo",
+            "value_struct": null,
+            "values": [
+              {
+                "id": null,
+                "name": "Vapor antiguo",
+                "struct": null,
+                "source": 7092
+              }
+            ]
+          }
+        ],
+        "original_price": null,
+        "category_id": "MLA10247",
+        "official_store_id": null,
+        "domain_id": "MLA-MODEL_RAILROADING_TRAINS",
+        "catalog_product_id": null,
+        "tags": [
+          "brand_verified",
+          "good_quality_picture",
+          "good_quality_thumbnail",
+          "immediate_payment",
+          "cart_eligible"
+        ],
+        "order_backend": 3,
+        "use_thumbnail_id": true
+      },
+      {
+        "id": "MLA862645070",
+        "site_id": "MLA",
+        "title": "Tren Madera Grande Bloques Construccion Locomotora Calidad ",
+        "seller": {
+          "id": 216134480,
+          "permalink": "http://perfil.mercadolibre.com.ar/TIENDA+CRACOVIA",
+          "registration_date": "2016-06-03T11:04:26.000-04:00",
+          "car_dealer": false,
+          "real_estate_agency": false,
+          "tags": [
+            "normal",
+            "user_info_verified",
+            "credits_priority_4",
+            "eshop",
+            "credits_profile",
+            "mshops",
+            "messages_as_seller",
+            "messages_as_buyer"
+          ],
+          "eshop": {
+            "nick_name": "TIENDA CRACOVIA",
+            "eshop_rubro": null,
+            "eshop_id": 237526,
+            "eshop_locations": [
+            ],
+            "site_id": "MLA",
+            "eshop_logo_url": "http://resources.mlstatic.com/eshops/216134480v2d5a53.png",
+            "eshop_status_id": 1,
+            "seller": 216134480,
+            "eshop_experience": 0
+          },
+          "seller_reputation": {
+            "transactions": {
+              "total": 30405,
+              "canceled": 918,
+              "period": "historic",
+              "ratings": {
+                "negative": 0.01,
+                "positive": 0.98,
+                "neutral": 0.01
+              },
+              "completed": 29487
+            },
+            "power_seller_status": "platinum",
+            "metrics": {
+              "claims": {
+                "rate": 0.0016,
+                "value": 4,
+                "period": "60 days"
+              },
+              "delayed_handling_time": {
+                "rate": 0.0004,
+                "value": 1,
+                "period": "60 days"
+              },
+              "sales": {
+                "period": "60 days",
+                "completed": 2377
+              },
+              "cancellations": {
+                "rate": 0,
+                "value": 1,
+                "period": "60 days"
+              }
+            },
+            "level_id": "5_green"
+          }
+        },
+        "price": 2249,
+        "prices": {
+          "id": "MLA862645070",
+          "prices": [
+            {
+              "id": "2",
+              "type": "standard",
+              "conditions": {
+                "context_restrictions": [
+                ],
+                "start_time": null,
+                "end_time": null,
+                "eligible": true
+              },
+              "amount": 2379,
+              "regular_amount": null,
+              "currency_id": "ARS",
+              "exchange_rate_context": "DEFAULT",
+              "metadata": {
+              },
+              "last_updated": "2021-02-25T20:32:05Z"
+            },
+            {
+              "id": "4",
+              "type": "promotion",
+              "conditions": {
+                "context_restrictions": [
+                ],
+                "start_time": "2021-04-05T02:30:00Z",
+                "end_time": "2021-04-19T02:59:00Z",
+                "eligible": true
+              },
+              "amount": 2249,
+              "regular_amount": 2379,
+              "currency_id": "ARS",
+              "exchange_rate_context": "DEFAULT",
+              "metadata": {
+                "campaign_id": "MLA5814",
+                "promotion_id": "MLA5814",
+                "promotion_type": "campaign"
+              },
+              "last_updated": "2021-04-05T02:58:31Z"
+            }
+          ],
+          "presentation": {
+            "display_currency": "ARS"
+          },
+          "payment_method_prices": [
+          ],
+          "reference_prices": [
+            {
+              "id": "3",
+              "type": "was",
+              "conditions": {
+                "context_restrictions": [
+                ],
+                "start_time": "2021-03-06T05:02:26Z",
+                "end_time": "2021-03-09T05:02:26Z",
+                "eligible": true
+              },
+              "amount": 2207.38,
+              "currency_id": "ARS",
+              "exchange_rate_context": "DEFAULT",
+              "tags": [
+              ],
+              "last_updated": "2021-03-06T05:02:26Z"
+            }
+          ],
+          "purchase_discounts": [
+          ]
+        },
+        "sale_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 150,
+        "buying_mode": "buy_it_now",
+        "listing_type_id": "gold_special",
+        "stop_time": "2040-06-11T04:00:00.000Z",
+        "condition": "new",
+        "permalink": "https://articulo.mercadolibre.com.ar/MLA-862645070-tren-madera-grande-bloques-construccion-locomotora-calidad-_JM",
+        "thumbnail": "http://http2.mlstatic.com/D_906009-MLA42231554754_062020-I.jpg",
+        "thumbnail_id": "906009-MLA42231554754_062020",
+        "accepts_mercadopago": true,
+        "installments": {
+          "quantity": 12,
+          "amount": 318.93,
+          "rate": 70.17,
+          "currency_id": "ARS"
+        },
+        "address": {
+          "state_id": "AR-C",
+          "state_name": "Capital Federal",
+          "city_id": "TUxBQlZJTDQyMjBa",
+          "city_name": "Villa Crespo"
+        },
+        "shipping": {
+          "free_shipping": false,
+          "mode": "me2",
+          "tags": [
+            "fulfillment",
+            "self_service_in"
+          ],
+          "logistic_type": "fulfillment",
+          "store_pick_up": false
+        },
+        "seller_address": {
+          "id": "",
+          "comment": "",
+          "address_line": "",
+          "zip_code": "",
+          "country": {
+            "id": "AR",
+            "name": "Argentina"
+          },
+          "state": {
+            "id": "AR-C",
+            "name": "Capital Federal"
+          },
+          "city": {
+            "id": "TUxBQlZJTDQyMjBa",
+            "name": "Villa Crespo"
+          },
+          "latitude": "",
+          "longitude": ""
+        },
+        "attributes": [
+          {
+            "id": "BRAND",
+            "value_id": "6105964",
+            "value_struct": null,
+            "attribute_group_id": "OTHERS",
+            "attribute_group_name": "Otros",
+            "source": 2860837171021627,
+            "name": "Marca",
+            "value_name": "Pampa Púa",
+            "values": [
+              {
+                "id": "6105964",
+                "name": "Pampa Púa",
+                "struct": null,
+                "source": 2860837171021627
+              }
+            ]
+          },
+          {
+            "value_name": "Nuevo",
+            "attribute_group_id": "OTHERS",
+            "attribute_group_name": "Otros",
+            "source": 2860837171021627,
+            "name": "Condición del ítem",
+            "value_id": "2230284",
+            "value_struct": null,
+            "values": [
+              {
+                "id": "2230284",
+                "name": "Nuevo",
+                "struct": null,
+                "source": 2860837171021627
+              }
+            ],
+            "id": "ITEM_CONDITION"
+          },
+          {
+            "id": "MODEL",
+            "value_id": null,
+            "value_struct": null,
+            "values": [
+              {
+                "source": 2860837171021627,
+                "id": null,
+                "name": "Tren con Bloques",
+                "struct": null
+              }
+            ],
+            "attribute_group_id": "OTHERS",
+            "attribute_group_name": "Otros",
+            "name": "Modelo",
+            "value_name": "Tren con Bloques",
+            "source": 2860837171021627
+          },
+          {
+            "id": "PACKAGE_LENGTH",
+            "value_id": null,
+            "value_name": "21.6 cm",
+            "values": [
+              {
+                "id": null,
+                "name": "21.6 cm",
+                "struct": {
+                  "number": 21.6,
+                  "unit": "cm"
+                },
+                "source": 4333789534002961
+              }
+            ],
+            "attribute_group_name": "Otros",
+            "source": 4333789534002961,
+            "name": "Largo del paquete",
+            "value_struct": {
+              "number": 21.6,
+              "unit": "cm"
+            },
+            "attribute_group_id": "OTHERS"
+          },
+          {
+            "attribute_group_name": "Otros",
+            "id": "PACKAGE_WEIGHT",
+            "value_id": null,
+            "value_struct": {
+              "unit": "g",
+              "number": 680
+            },
+            "values": [
+              {
+                "name": "680 g",
+                "struct": {
+                  "number": 680,
+                  "unit": "g"
+                },
+                "source": 4333789534002961,
+                "id": null
+              }
+            ],
+            "attribute_group_id": "OTHERS",
+            "source": 4333789534002961,
+            "name": "Peso del paquete",
+            "value_name": "680 g"
+          }
+        ],
+        "original_price": 2379,
+        "category_id": "MLA38493",
+        "official_store_id": null,
+        "domain_id": "MLA-TOY_TRAINS",
+        "catalog_product_id": null,
+        "tags": [
+          "brand_verified",
+          "good_quality_picture",
+          "good_quality_thumbnail",
+          "loyalty_discount_eligible",
+          "immediate_payment",
+          "cart_eligible",
+          "shipping_guaranteed",
+          "best_seller_candidate"
+        ],
+        "order_backend": 4,
+        "use_thumbnail_id": true
+      }
+    ],
+    "secondary_results": [
+    ],
+    "related_results": [
+    ],
+    "sort": {
+      "id": "relevance",
+      "name": "More relevant"
+    },
+    "available_sorts": [
+      {
+        "id": "price_asc",
+        "name": "Lower price"
+      },
+      {
+        "id": "price_desc",
+        "name": "Higher price"
+      }
+    ],
+    "filters": [
+      {
+        "id": "category",
+        "name": "Categories",
+        "type": "text",
+        "values": [
+          {
+            "id": "MLA1132",
+            "name": "Juegos y Juguetes",
+            "path_from_root": [
+              {
+                "id": "MLA1132",
+                "name": "Juegos y Juguetes"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "available_filters": [
+      {
+        "id": "category",
+        "name": "Categories",
+        "type": "text",
+        "values": [
+          {
+            "id": "MLA432871",
+            "name": "Vehículos de Juguete",
+            "results": 4005
+          },
+          {
+            "id": "MLA432873",
+            "name": "Hobbies",
+            "results": 1413
+          },
+          {
+            "id": "MLA3655",
+            "name": "Juguetes para Bebés",
+            "results": 512
+          },
+          {
+            "id": "MLA432988",
+            "name": "Juegos de Mesa y Cartas",
+            "results": 196
+          },
+          {
+            "id": "MLA432888",
+            "name": "Muñecos y Muñecas",
+            "results": 171
+          },
+          {
+            "id": "MLA455425",
+            "name": "Juguetes de Construcción",
+            "results": 158
+          },
+          {
+            "id": "MLA433069",
+            "name": "Juegos de Agua y Playa",
+            "results": 34
+          },
+          {
+            "id": "MLA6151",
+            "name": "Vehículos Montables para Niños",
+            "results": 33
+          },
+          {
+            "id": "MLA1831",
+            "name": "Figuritas, Álbumes y Cromos",
+            "results": 30
+          },
+          {
+            "id": "MLA2967",
+            "name": "Electrónicos para Niños",
+            "results": 24
+          },
+          {
+            "id": "MLA11229",
+            "name": "Instrumentos Musicales",
+            "results": 21
+          },
+          {
+            "id": "MLA6558",
+            "name": "Peloteros y Castillos",
+            "results": 17
+          },
+          {
+            "id": "MLA1166",
+            "name": "Peluches",
+            "results": 16
+          },
+          {
+            "id": "MLA432991",
+            "name": "Juguetes Antiestrés e Ingenio",
+            "results": 15
+          },
+          {
+            "id": "MLA418284",
+            "name": "Arte y Manualidades",
+            "results": 14
+          },
+          {
+            "id": "MLA1167",
+            "name": "Juegos de Plaza y Aire Libre",
+            "results": 2
+          },
+          {
+            "id": "MLA432818",
+            "name": "Juguetes de Oficios",
+            "results": 2
+          },
+          {
+            "id": "MLA37615",
+            "name": "Mesas y Sillas para Niños",
+            "results": 2
+          },
+          {
+            "id": "MLA433047",
+            "name": "Títeres y Marionetas",
+            "results": 2
+          },
+          {
+            "id": "MLA1910",
+            "name": "Otros",
+            "results": 244
+          }
+        ]
+      },
+      {
+        "id": "official_store",
+        "name": "Tiendas oficiales",
+        "type": "text",
+        "values": [
+          {
+            "id": "all",
+            "name": "Todas las tiendas oficiales",
+            "results": 331
+          },
+          {
+            "id": "2104",
+            "name": "Trencity",
+            "results": 31
+          },
+          {
+            "id": "211",
+            "name": "Educando",
+            "results": 46
+          },
+          {
+            "id": "256",
+            "name": "Kinderland",
+            "results": 47
+          },
+          {
+            "id": "632",
+            "name": "Osito Azul",
+            "results": 34
+          },
+          {
+            "id": "781",
+            "name": "Cebra",
+            "results": 26
+          },
+          {
+            "id": "2131",
+            "name": "Lionels",
+            "results": 1
+          }
+        ]
+      },
+      {
+        "id": "discount",
+        "name": "Descuentos",
+        "type": "range",
+        "values": [
+          {
+            "id": "5-100",
+            "name": "Desde 5% OFF",
+            "results": 114
+          },
+          {
+            "id": "10-100",
+            "name": "Desde 10% OFF",
+            "results": 75
+          },
+          {
+            "id": "15-100",
+            "name": "Desde 15% OFF",
+            "results": 59
+          },
+          {
+            "id": "20-100",
+            "name": "Desde 20% OFF",
+            "results": 51
+          },
+          {
+            "id": "25-100",
+            "name": "Desde 25% OFF",
+            "results": 29
+          },
+          {
+            "id": "30-100",
+            "name": "Desde 30% OFF",
+            "results": 8
+          }
+        ]
+      },
+      {
+        "id": "state",
+        "name": "Location",
+        "type": "text",
+        "values": [
+          {
+            "id": "TUxBUENBUGw3M2E1",
+            "name": "Capital Federal",
+            "results": 3864
+          },
+          {
+            "id": "TUxBUEdSQWVmNTVm",
+            "name": "Bs.As. G.B.A. Oeste",
+            "results": 831
+          },
+          {
+            "id": "TUxBUEdSQWU4ZDkz",
+            "name": "Bs.As. G.B.A. Norte",
+            "results": 689
+          },
+          {
+            "id": "TUxBUEdSQXJlMDNm",
+            "name": "Bs.As. G.B.A. Sur",
+            "results": 625
+          },
+          {
+            "id": "TUxBUFNBTmU5Nzk2",
+            "name": "Santa Fe",
+            "results": 217
+          },
+          {
+            "id": "TUxBUFpPTmFpbnRl",
+            "name": "Buenos Aires Interior",
+            "results": 168
+          },
+          {
+            "id": "TUxBUENPUmFkZGIw",
+            "name": "Córdoba",
+            "results": 124
+          },
+          {
+            "id": "TUxBUFNBTnM0ZTcz",
+            "name": "San Luis",
+            "results": 122
+          },
+          {
+            "id": "TUxBUE1FTmE5OWQ4",
+            "name": "Mendoza",
+            "results": 120
+          },
+          {
+            "id": "TUxBUENPU2ExMmFkMw",
+            "name": "Bs.As. Costa Atlántica",
+            "results": 111
+          },
+          {
+            "id": "TUxBUFRVQ244NmM3",
+            "name": "Tucumán",
+            "results": 38
+          },
+          {
+            "id": "TUxBUFNBTGFjMTJi",
+            "name": "Salta",
+            "results": 32
+          },
+          {
+            "id": "TUxBUENIVXQxNDM1MQ",
+            "name": "Chubut",
+            "results": 22
+          },
+          {
+            "id": "TUxBUFNBTm9lOTlk",
+            "name": "Santiago del Estero",
+            "results": 20
+          },
+          {
+            "id": "TUxBUEVOVHMzNTdm",
+            "name": "Entre Ríos",
+            "results": 11
+          },
+          {
+            "id": "TUxBUE5FVW4xMzMzNQ",
+            "name": "Neuquén",
+            "results": 10
+          },
+          {
+            "id": "TUxBUFLNT29iZmZm",
+            "name": "Río Negro",
+            "results": 10
+          },
+          {
+            "id": "TUxBUFNBTno3ZmY5",
+            "name": "Santa Cruz",
+            "results": 10
+          },
+          {
+            "id": "TUxBUE1JU3MzNjIx",
+            "name": "Misiones",
+            "results": 8
+          },
+          {
+            "id": "TUxBUENIQW8xMTNhOA",
+            "name": "Chaco",
+            "results": 6
+          },
+          {
+            "id": "TUxBUENPUnM5MjI0",
+            "name": "Corrientes",
+            "results": 6
+          }
+        ]
+      },
+      {
+        "id": "price",
+        "name": "Precio",
+        "type": "range",
+        "values": [
+          {
+            "id": "*-1500.0",
+            "name": "Up to $1.500",
+            "results": 1913
+          },
+          {
+            "id": "1500.0-5000.0",
+            "name": "$1.500 to $5.000",
+            "results": 2618
+          },
+          {
+            "id": "5000.0-*",
+            "name": "More than $5.000",
+            "results": 2331
+          }
+        ]
+      },
+      {
+        "id": "accepts_mercadopago",
+        "name": "MercadoPago filter",
+        "type": "boolean",
+        "values": [
+          {
+            "id": "yes",
+            "name": "With MercadoPago",
+            "results": 6862
+          }
+        ]
+      },
+      {
+        "id": "installments",
+        "name": "Pago",
+        "type": "text",
+        "values": [
+          {
+            "id": "yes",
+            "name": "Installments",
+            "results": 6850
+          },
+          {
+            "id": "no_interest",
+            "name": "Sin interés",
+            "results": 692
+          }
+        ]
+      },
+      {
+        "id": "shipping",
+        "name": "Envío",
+        "type": "text",
+        "values": [
+          {
+            "id": "mercadoenvios",
+            "name": "Mercado Envíos",
+            "results": 6579
+          },
+          {
+            "id": "fulfillment",
+            "name": "Full",
+            "results": 129
+          }
+        ]
+      },
+      {
+        "id": "power_seller",
+        "name": "Seller quality filter",
+        "type": "boolean",
+        "values": [
+          {
+            "id": "yes",
+            "name": "Best sellers",
+            "results": 2909
+          }
+        ]
+      },
+      {
+        "id": "since",
+        "name": "Auction start date filter",
+        "type": "text",
+        "values": [
+          {
+            "id": "today",
+            "name": "Publicados hoy",
+            "results": 14
+          }
+        ]
+      },
+      {
+        "id": "until",
+        "name": "Auction stop filter",
+        "type": "text",
+        "values": [
+          {
+            "id": "today",
+            "name": "Ending today",
+            "results": 8
+          }
+        ]
+      },
+      {
+        "id": "has_video",
+        "name": "Video publications filter",
+        "type": "boolean",
+        "values": [
+          {
+            "id": "yes",
+            "name": "Publications with video",
+            "results": 597
+          }
+        ]
+      },
+      {
+        "id": "has_pictures",
+        "name": "Items with images filter",
+        "type": "boolean",
+        "values": [
+          {
+            "id": "yes",
+            "name": "With pictures",
+            "results": 6860
+          }
+        ]
+      },
+      {
+        "id": "price_campaign_id",
+        "name": "Campaña",
+        "type": "number",
+        "values": [
+          {
+            "id": "MLA5814",
+            "name": "MLA5814",
+            "results": 3
+          }
+        ]
+      },
+      {
+        "id": "shipping_cost",
+        "name": "Costo de envío",
+        "type": "text",
+        "values": [
+          {
+            "id": "free",
+            "name": "Gratis",
+            "results": 2014
+          }
+        ]
+      },
+      {
+        "id": "ITEM_CONDITION",
+        "name": "Condición",
+        "type": "STRING",
+        "values": [
+          {
+            "id": "2230284",
+            "name": "Nuevo",
+            "results": 4708
+          },
+          {
+            "id": "2230581",
+            "name": "Usado",
+            "results": 2240
+          }
+        ]
+      }
+    ]
+  }

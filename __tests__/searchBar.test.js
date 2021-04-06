@@ -9,7 +9,7 @@ jest.mock("next/router", () => ({
 
 afterEach(cleanup);
 
-test("SearchParams", () => {
+test("SearchBar", () => {
   const { getByTestId } = render(<SearchBar />);
   const inputSearchBar = getByTestId("use-input-searchbar");
   const push = jest.fn();
