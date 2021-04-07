@@ -1,14 +1,5 @@
 import GetParsedData from '../../../pages/api/items'
-import { readFileSync } from 'fs'
-import path from 'path'
-
-const searchResultResponseMock = JSON.parse(
-  readFileSync(path.join(__dirname, '/searchResultResponse.json')).toString()
-)
-
-export const searchResultParsedMock = JSON.parse(
-  readFileSync(path.join(__dirname, '/searchResultParsed.json')).toString()
-)
+import { searchResultResponseMock, searchResultParsedMock } from 'api/items'
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
@@ -20,6 +11,7 @@ global.fetch = jest.fn(() =>
 beforeEach(() => {
   fetch.mockClear();
 });
+
 describe("Test /api/items?q=", () => {
   test("getParsedProductPage", async () => {
     const req = {
