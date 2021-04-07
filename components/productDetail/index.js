@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductInformation from './productInformation'
+import ProductInformation from './ProductInformation'
 import ProductDescription from './ProductDescription'
 import productDetailStyles from './productDetail.module.scss'
 

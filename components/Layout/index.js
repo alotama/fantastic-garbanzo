@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from '../footer'
-import SearchBar from '../searchBar'
+import Footer from '../Footer'
+import SearchBar from '../SearchBar'
 import Head from 'next/head'
 
 const getPageTitle = (title) => ((title && `${title} | `) + 'Sebastián Tamashiro - Challenge')

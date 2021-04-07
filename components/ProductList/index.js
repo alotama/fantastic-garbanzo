@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductCluster from './productCluster'
+import ProductCluster from './ProductCluster'
 import ProductListStyles from './productList.module.scss'
 
 const ProductList = ({ products }) => {
