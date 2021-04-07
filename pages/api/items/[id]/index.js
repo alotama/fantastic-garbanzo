@@ -58,11 +58,10 @@ const FetchProductCategory = async (query) => {
           'Authorization': `Bearer ${process.env.ACCESS_TOKEN}`
         }
       })
-      
+
       let productCategoryResponse = await getProductCategoryResponse
       if (productCategoryResponse.status === 200) { 
         let productCategory = productCategoryResponse.json()
-        productCategory.query = query
         productPageCache.mset([{ key: 'productCategory', val: productCategory }])
         return productCategory
       } else {
@@ -136,8 +135,8 @@ const getParsedProductPage = async (req, res) => {
   try {
     let productDataResponse = await FetchProductData(req.query.id)
     let clonedItem = cloneObject(productDataResponse)
-    let productCategoryResponse = await FetchProductCategory(clonedItem.category_id)
     let ProductDescriptionResponse = await FetchProductDescription(req.query.id)
+    let productCategoryResponse = await FetchProductCategory(clonedItem.category_id)
     const clonedProductTemplate = cloneObject(productTemplate)
     let clonedItemDescription = cloneObject(ProductDescriptionResponse)
     let clonedItemCategory = cloneObject(productCategoryResponse)
@@ -153,6 +152,7 @@ const getParsedProductPage = async (req, res) => {
     }
 
     res.status(200).json(parsedProductData)
+    return parsedProductData
   } catch (e) {
     console.error({
       "message": "No se pudo parsear correctamente la respuesta de la API",
