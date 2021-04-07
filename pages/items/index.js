@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from '../../components/layout'
-import ProductList from '../../components/productList'
-import Breadcrumb from '../../components/breadcrumb'
+import Layout from '../../components/Layout'
+import ProductList from '../../components/ProductList'
+import Breadcrumb from '../../components/Breadcrumb'
 import { capitalizeFirstLetter } from '../../utils'
 
 const SearchResult = ({ errorCode, categories, items, search }) => {
