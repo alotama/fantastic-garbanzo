@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  background-color: $primary;
+  width: 100%;
+  padding: $space-sm 0; 
+}
+
+.container {
+  display: flex;
+}
+
+.logoContainer {
+  margin-right: $space-lg;
+}
+
+.logo {
+  width: 3rem;
+  height: auto;
+}
+
+.searchContainer {
+  width: 100%; 
+  display: flex;
+}
+
+.searchInput {
+  width: 100%;
+  border: none;
+  @include font-big;
+  padding: $space-xs $space-md;
+  border-radius: $borderRadius 0 0 $borderRadius;
+}
+
+.searchButtonContainer {
+  display: flex;
+  background-color: $grey-3;
+  padding: $space-xs $space-sm;
+  align-items: center;
+  border: none;
+  border-radius: 0 $borderRadius $borderRadius 0;
+}
+
+.searchIconButton {
+  width: 1.2rem;
+}

@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.container {
+  display: block;
+  @include media-breakpoint-up($breakpoint-lg) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: $space-md;
+  }
+}
+
+.imageContainer {
+  & > img {
+    width: 100%;
+    height: auto;
+  }
+  @include media-breakpoint-up($breakpoint-lg) {
+    grid-column: 1/3;
+    & > img {
+      aspect-ratio: attr(width) / attr(height);
+      width: 100%;
+      max-width: 42.5rem;
+      height: auto;
+    }
+  }
+}
+
+.content {
+  grid-column: 3/3;
+}
+
+.detail {
+  margin-bottom: $space-md;
+}
+
+.title{
+  margin-bottom: $space-lg;
+  @include font-headering-3;
+  font-weight: 600;
+}
+
+.priceThousands {
+  margin-bottom: $space-lg;
+  @include font-headering-1;
+  font-weight: 400;
+  display: flex;
+}
+
+.priceDecimals {
+ @include font-body;
+ font-weight: 400; 
+}
+
+.button {
+  background-color: $secondary;
+  width: 100%;
+  padding: $space-sm;
+  border: none;
+  border-radius: $borderRadius;
+  color: $white;
+}

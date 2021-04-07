@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.container {
+  @include content-block;
+}
+
+.content {
+  list-style: none;
+  padding: 0 $space-md;
+}

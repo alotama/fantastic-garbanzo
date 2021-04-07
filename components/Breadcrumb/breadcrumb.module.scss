@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.steps {
+  @include font-small;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.item {
+  display: inline-block;
+  &:not(:last-of-type) {
+    &::after {
+      content: ' > ';
+      display: inline-block;
+      margin: 0 $space-xs;
+    }
+  }
+}
+
+.description {
+  
+}
