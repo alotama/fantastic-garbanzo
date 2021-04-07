@@ -2,13 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 import ProductClusterStyles from './productCluster.module.scss'
 
-const ProductCluster = ({ title, id, image, price, location, free_shipping }) => {
+const ProductCluster = ({ title, id, index, image, price, location, free_shipping }) => {
   return (
     <Link href={{
       pathname: '/items/[id]',
       query: { id: id },
     }}>
-      <a>
+      <a data-cy={`integration-productCluster-${index}`}>
         <li className={ProductClusterStyles.container}>
           <figure className={ProductClusterStyles.imageContainer}>
             <img

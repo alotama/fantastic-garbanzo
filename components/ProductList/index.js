@@ -9,6 +9,7 @@ const ProductList = ({ products }) => {
         {products.map((item, index) => (
           <ProductCluster
             data-testid={'use-productClusters'}
+            index={index}
             key={`${index}-${item.id}`}
             title={item.title}
             id={item.id}

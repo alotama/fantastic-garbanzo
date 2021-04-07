@@ -52,6 +52,7 @@ const SearchBar = (props) => {
           <form className={searchBarStyle.searchContainer}>
             <input
               data-testid={'use-input-searchbar'}
+              data-cy={'integration-search-input'}
               className={searchBarStyle.searchInput}
               type={'text'}
               placeholder={'Nunca dejes de buscar'}
@@ -60,6 +61,7 @@ const SearchBar = (props) => {
             />
             <button
               data-testid={'use-button-searchbar'}
+              data-cy={'integration-search-button'}
               type="submit"
               className={searchBarStyle.searchButtonContainer}
               onClick={(e) => searchBarValidation(e, inputValue)}
