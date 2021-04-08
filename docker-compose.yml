@@ -6,8 +6,10 @@ services:
     ports:
       - "3000:3000"
     volumes:
+      - ./__mocks__:/home/node/src/__mocks__
+      - ./__tests__:/home/node/src/__tests__
       - ./components:/home/node/src/components
-      - ./mocks:/home/node/src/mocks
+      - ./cypress:/home/node/src/cypress
       - ./pages:/home/node/src/pages
       - ./public:/home/node/src/public
       - ./styles:/home/node/src/styles
