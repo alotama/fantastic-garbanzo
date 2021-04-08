@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from '../../../components/Layout'
-import ProductDetail from '../../../components/ProductDetail';
-import Breadcrumb from '../../../components/Breadcrumb'
+import Layout from '@components/Layout'
+import ProductDetail from '@components/ProductDetail';
+import Breadcrumb from '@components/Breadcrumb'
 
 const ProductPage = ({ id, item, errorCode }) => {
   if (errorCode) {

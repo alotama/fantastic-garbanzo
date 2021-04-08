@@ -1,5 +1,6 @@
 import React from 'react'
 import productInformationStyles from './productInformation.module.scss'
+import PropTypes from 'prop-types';
 
 const productInformation = ({ image, condition, sold_quantity, title, priceThousands, priceDecimals }) => {
   return (
@@ -16,10 +17,19 @@ const productInformation = ({ image, condition, sold_quantity, title, priceThous
             {priceDecimals}
           </span>
         </h2>
-        <button aria-label="Comprar" className={productInformationStyles.button}>Comprar</button>
+        <button data-cy={`integration-product-buy-button`} aria-label="Comprar" className={productInformationStyles.button}>Comprar</button>
       </section>
     </article>
   )
+}
+
+productInformation.prototype = {
+  image: PropTypes.string.isRequired,
+  condition: PropTypes.string.isRequired,
+  sold_quantity: PropTypes.number.isRequired, 
+  title: PropTypes.string.isRequired, 
+  priceThousands: PropTypes.string.isRequired, 
+  priceDecimals: PropTypes.string.isRequired, 
 }
 
 export default productInformation

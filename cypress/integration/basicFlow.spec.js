@@ -29,6 +29,7 @@ const ProductPageTest = () => (
       cy.visit(href)
       cy.url().should('include', href)
     })
+    cy.get(`[data-cy=integration-product-buy-button]`).should('be.visible')
   })
 )
 

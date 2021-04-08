@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import searchBarStyle from './searchBar.module.scss';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 
 const useLocalStorage = localStorageKey => {
   const [value, setValue] = React.useState(() => {
@@ -17,7 +18,7 @@ const useLocalStorage = localStorageKey => {
   return [value, setValue];
 };
 
-const SearchBar = (props) => {
+const SearchBar = () => {
   const [inputValue, setInputValue] = useLocalStorage('inputValue')
   
   const router = useRouter()
