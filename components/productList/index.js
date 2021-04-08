@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductCluster from './ProductCluster'
 import ProductListStyles from './productList.module.scss'
-
+import PropTypes from 'prop-types';
 const ProductList = ({ products }) => {
   return (
     <section className={ProductListStyles.container} >
@@ -22,6 +22,10 @@ const ProductList = ({ products }) => {
       </ol>
     </section>
   )
+}
+
+ProductList.prototype = {
+  products: PropTypes.object,
 }
 
 export default ProductList

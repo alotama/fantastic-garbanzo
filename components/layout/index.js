@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../Footer'
 import SearchBar from '../SearchBar'
 import Head from 'next/head'
+import PropTypes from 'prop-types';
 
 const getPageTitle = (title) => ((title && `${title} | `) + 'Sebastián Tamashiro - Challenge')
 
@@ -31,6 +32,14 @@ const Layout = ({ children, title, description, picture, pageURL }) => {
       <Footer />
     </>
   )
+}
+
+Layout.prototype = {
+  children: PropTypes.element,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  picture: PropTypes.string,
+  pageUR: PropTypes.string,
 }
 
 export default Layout

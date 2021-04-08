@@ -1,11 +1,9 @@
-import Link from 'next/link'
 import React from 'react'
 import footerStyle from './footer.module.scss'
 
 const Footer = () => {
   return (
-    <footer className={footerStyle.wrapper}>
-      <div className={'layout__container'}>
+    <footer className={`layout__container ${footerStyle.wrapper}`}>
         <section className={`layout__content ${footerStyle.content}`}>
           <article>
             <a href={'www.github.com/alotama'}>Documentación</a>
@@ -16,7 +14,6 @@ const Footer = () => {
           </a>
           </article>
         </section>
-      </div>
     </footer>
   )
 }

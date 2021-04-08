@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@utils/helpers": ["./utils/helpers/index.js"],
+      "@utils/parsers": ["./utils/parsers/index.js"],
+      "@utils/template": ["./utils/template/index.js"],
+      "@utils/fetchers": ["./utils/fetchers/index.js"],
+      "@components/*": ["./components/*"]
+    }
+  }
+}

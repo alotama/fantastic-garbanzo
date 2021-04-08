@@ -1,10 +1,10 @@
-import Layout from '../components/layout'
-import ProductError from '../components/errors'
+import Layout from '@components/Layout'
+import ProductError from '@components/Errors'
 
 function Error({ query, productID }) {
   return (
     <Layout>
-      {query.search && (
+      {query && (
         <ProductError
           title={'No se encontraron resultados para lo que estas buscando'}
           content={'Escribí en el buscador nuevamente otra cosa que estés buscando.'}
@@ -24,6 +24,8 @@ Error.getInitialProps = ({ query, asPath, req, res, err }) => {
   const statusCode = res ? res.statusCode : err ? err.statusCode : 404
   const pathID = asPath.match(/.*\/(.*)$/);
   const productID = pathID[1].startsWith('MLA')
+
+  console.log('statusCode ->', statusCode)
 
   return { statusCode, query, productID }
 }

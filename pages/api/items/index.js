@@ -1,70 +1,21 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { cloneObject, getAsignedPropertyToProductTemplate, author, productTemplate } from '../../../utils'
+import { AuthorTemplate, productTemplate } from '@utils/template';
+import { cloneObject } from '@utils/helpers';
+import { getBasicItemFormat } from '@utils/parsers';
+import { fetchSearchResult } from '@utils/fetchers';
 import NodeCache from 'node-cache';
 
-const CACHE_TTL = 9000
-const CHECK_PERIOD = 10000
-const searchCache = new NodeCache({ stdTTL: CACHE_TTL, checkperiod: CHECK_PERIOD });
-
-const getBasicItemFormat = (object) => {
-  const clonedProductTemplate = cloneObject(productTemplate);
-  return object.reduce((acc, element) => {
-    let asignedProductTemplate = getAsignedPropertyToProductTemplate(clonedProductTemplate, element)
-    asignedProductTemplate.location = element.address.state_name
-    asignedProductTemplate.free_shipping = element.shipping.free_shipping
-    return [
-      ...acc,
-      cloneObject(asignedProductTemplate)
-    ]
-  }, [])
-}
-
-export const getSearchResult = async (query) => {
-  const searchResultCache = searchCache.get("searchResult")
-
-  if (searchResultCache && searchResultCache.query === query) {
-    console.log('cache')
-    return searchResultCache
-  } else {
-    console.log('fetch')
-    try {
-      let getSearchResultResponse = await fetch(`${process.env.API_URL}sites/MLA/search?q=${query}&nano&limit=4`, {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${process.env.ACCESS_TOKEN}`
-        }
-      })
-
-      
-      let searchResultResponse = await getSearchResultResponse
-      
-      if (searchResultResponse.status === 200) {        
-        const searchResult = searchResultResponse.json()
-        searchCache.set('searchResult', searchResult)
-        return searchResult;
-      } else {
-        throw searchResultResponse
-      }
-    } catch (er) {
-      console.error({
-        "message": "Hubo un error al consultar a la API de Mercadolibre",
-        "error": "no_reached_mercadolibre_api",
-        "status": 403,
-        "cause": [er],
-      })
-    }
-  }
-}
+const searchCache = new NodeCache({ stdTTL: process.env.CACHE_TTL, checkperiod: process.env.CHECK_PERIOD });
 
 const getParsedSearchResultData = async (req, res) => {
   let breadcrumbSearchResult = []
   let parsedSearchResult = {
-    author,
+    AuthorTemplate,
     "categories": breadcrumbSearchResult,
     "items": [],
   }
   try {
-    let fetchSearchResponse = await getSearchResult(req.query.q)
+    let fetchSearchResponse = await fetchSearchResult(req.query.q, searchCache)
 
     let clonedSearchResult = cloneObject(fetchSearchResponse)
     const searchResultItems = getBasicItemFormat(clonedSearchResult.results || [])
@@ -74,11 +25,7 @@ const getParsedSearchResultData = async (req, res) => {
       const sortedCategories = getFilterCategories.values.sort((pre, post) => parseFloat(post.results) - parseFloat(pre.results))
       breadcrumbSearchResult = sortedCategories.map(element => element.name)
     }
-    // searchResultItems.free_shipping = clonedSearchResult.results.map(product => {
-    //   console.log('product ->', product.shipping.free_shipping)
-    //   return product.shipping.free_shipping
-    // })
-  
+
     parsedSearchResult = {
       "categories": breadcrumbSearchResult,
       "items": searchResultItems,
