@@ -3,7 +3,7 @@
 .container {
   @include content-block;
   padding: $space-lg;
-  box-sizing: content-box;
+  box-sizing: border-box;
   margin-top: $space-lg;
 }
 

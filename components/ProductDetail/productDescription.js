@@ -1,5 +1,6 @@
 import React from 'react'
 import productDescriptionStyles from './productDescription.module.scss'
+import PropTypes from 'prop-types';
 
 const ProductDescription = ({ description }) => {
   return (
@@ -8,6 +9,10 @@ const ProductDescription = ({ description }) => {
       <p className={productDescriptionStyles.content}>{description}</p>
     </article>
   )
+}
+
+ProductDescription.prototype = {
+  description: PropTypes.string.isRequired
 }
 
 export default ProductDescription

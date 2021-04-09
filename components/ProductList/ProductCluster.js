@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import ProductClusterStyles from './productCluster.module.scss'
-
+import PropTypes from 'prop-types';
 const ProductCluster = ({ title, id, index, image, price, location, free_shipping }) => {
   return (
     <Link href={{
@@ -40,6 +40,16 @@ const ProductCluster = ({ title, id, index, image, price, location, free_shippin
       </a>
     </Link>
   )
+}
+
+ProductCluster.prototype = {
+  title: PropTypes.string.isRequired, 
+  id: PropTypes.string.isRequired, 
+  index: PropTypes.number, 
+  image: PropTypes.string.isRequired, 
+  price: PropTypes.string.isRequired, 
+  location: PropTypes.string.isRequired, 
+  free_shipping: PropTypes.bool
 }
 
 export default ProductCluster
