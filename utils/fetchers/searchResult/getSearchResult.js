@@ -7,7 +7,7 @@ const fetchSearchResult = async (query, cache) => {
   } else {
     console.log('fetch')
     try {
-      let getSearchResultResponse = await fetch(`${process.env.API_URL}sites/MLA/search?q=${query}&nano&limit=4`, {
+      let getSearchResultResponse = await fetch(`${process.env.API_URL}sites/MLA/search?q=${query}&nano&limit=${process.env.LIMIT_RESULT}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${process.env.ACCESS_TOKEN}`

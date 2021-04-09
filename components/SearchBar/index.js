@@ -2,24 +2,9 @@ import React, { useState, useEffect } from 'react';
 import searchBarStyle from './searchBar.module.scss';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
 
-const useLocalStorage = localStorageKey => {
-  const [value, setValue] = React.useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem(localStorageKey) || ''
-    };
-  });
-
-  React.useEffect(() => {
-    localStorage.setItem(localStorageKey, value);
-  }, [value]);
- 
-  return [value, setValue];
-};
-
-const SearchBar = () => {
-  const [inputValue, setInputValue] = useLocalStorage('inputValue')
+const SearchBar = ({search}) => {
+  const [inputValue, setInputValue] = useState(search || '')
   
   const router = useRouter()
 
@@ -29,10 +14,6 @@ const SearchBar = () => {
       router.push(`/items?search=${text}`)
     }
   }
-
-  useEffect(() => {
-    localStorage.setItem('inputValue', inputValue);
-  }, [inputValue]);
 
   return (
     <section className={searchBarStyle.wrapper}>

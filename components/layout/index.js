@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const getPageTitle = (title) => ((title && `${title} | `) + 'Sebastián Tamashiro - Challenge')
 
-const Layout = ({ children, title, description, picture, pageURL }) => {
+const Layout = ({ children, title, description, picture, pageURL, search }) => {
   return (
     <>
       <Head>
@@ -21,7 +21,7 @@ const Layout = ({ children, title, description, picture, pageURL }) => {
         <meta name={"og:url"} content={`${process.env.SITE_URL}/${pageURL || ''}`}/>
         <link rel="canonical" href={`${process.env.SITE_URL}/${pageURL || ''}`} />
       </Head>
-      <SearchBar />
+      <SearchBar search={search}/>
       <main className={'layout__main'}>
         <div className={'layout__container'}>
           <div className={'layout__content'}>

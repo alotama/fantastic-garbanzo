@@ -14,6 +14,7 @@ const SearchResult = ({ errorCode, categories, items, search }) => {
       title={search}
       pageURL={`items?search=${search}`}
       description={`Encontrá ${search} en esta fantástica app de Sebastián Tamashiro. Nunca dejes de buscar. Meli Challenge 2021`}
+      search={search}
     >
       <Breadcrumb
         steps={categories}
