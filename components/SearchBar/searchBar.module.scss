@@ -8,6 +8,7 @@
 
 .container {
   display: flex;
+  align-items: center;
 }
 
 .logoContainer {
@@ -17,6 +18,7 @@
 .logo {
   width: 3rem;
   height: auto;
+  vertical-align: top;
 }
 
 .searchContainer {

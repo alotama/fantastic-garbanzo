@@ -1,6 +1,8 @@
 <!-- markdownlint-configure-file { "MD025": false, "MD036": false } -->
 # Descipción del proyecto
 
+Se debía que construir y maquetar los componentes necesarios para la realización de las 3 vistas de la aplicación: Caja de búsqueda, Resultado de la búsqueda y Detalle de producto. A su vez, desarrollar 2 endpoints que debían consultar a la API de Mercadolibre para luego utilizar las respuestas en las vistas anterior mencionadas.
+
 ## Requisitos funcionales
 
 - En la vista de caja de búsqueda, debería poder ingresar el producto a buscar y al enviar el formulario navegar a la vista de Resultados de búsqueda, visualizando solo 4 productos. Luego, al hacer clic sobre uno de ellos, debería navegar a la vista de Detalle de Producto.
@@ -14,12 +16,18 @@
 - Next.js (v10.1)
 - Node.js (v12.22)
 - SASS (v1.32)
+- Jest (v26.6)
+- Cypress (v7.0)
 
 Debido a la simpleza del proyecto, la misma esta controlada completamente por `Next`. Lo que se espera es que consulte a una API, luego parsear la consulta y dejarla disponible para que el front la utilice. Para el mismo se aprovecha la funcionalida [**API Routes**](https://nextjs.org/blog/next-9#api-routes), que esta disponible desde la versión 9.0 de la librería.
 
 ### ¿Por qué Next.js?
 
 Se trata de una de las librerías basadas en javascript más relevantes para la creación de aplicaciones web con React. Pensada para que los desarrolladores no tengan que hacer pre-configuraciones en el proyecto en el que van a trabajar, la optimización del código viene por default y la versatilidad de poder crear tanto aplicaciones complejas como sitios estáticos, sumado a muchas otros beneficios, la hacen una herramienta perfecta para este proyecto.
+
+### ¿Por qué Jest?
+
+### ¿Por qué Cypress?
 
 ## Inicialización de proyecto
 
@@ -64,13 +72,13 @@ Ver más sobre **variables de entorno**.
 
 Esta página unicamente alberga al buscador, el cuál se va a repetir en el resto de las páginas de la aplicación.
 
-## SearchResult Page
+## Resultado de búsqueda
 
 Al ingresar a la página de resultado de búsqueda, ésta realiza una llamada a la API interna con la función de nextjs, `getServerSideProps()` al endpooint `/api/items?q:query`. El cuál se comunica con la API de Mercadolibre para que le envíe **únicamente 4 resultados**. Una vez recibidos, el endpoint parsea la información y se la entrega a la página para que sea mostrada al usuario.
 
 ![Búsqueda de productos](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/SearchEndpoint.png)
 
-## ProductPage
+## Detalle de producto
 
 Una vez el usuario ingresa a la página de detalle de un producto, al igual que en la página de resultado de búsqueda, ésta hace un llamado a la API interna del proyecto con la función de nextjs `getServerSideProps()` al endpoint `/api/items/:id`. El cuál se comunica con la API de Mercadolibre para recibir la función del producto solictado, junto con su descripción y el arbol de la categoría al que corresponde el mismo.
 
@@ -79,6 +87,10 @@ Una vez el usuario ingresa a la página de detalle de un producto, al igual que 
 # Componentes
 
 ## Breadcrumb
+
+![Breadcrumb](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/Breadcrumb.png)
+
+En la página de resultado de búsqueda, debe armarse basado en la categoría que más resultados obtuvo. En la de detalle de producto debe armarse con la categoría propia del item.
 
 **Ejemplo de uso**
 
@@ -102,6 +114,10 @@ export default () => {
 | steps | array    | true      | -                 |
 
 ## ProductDetail
+
+![ProductDetail](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/ProductDetail.png)
+
+Recibe la información del producto y la muestra.
 
 **Ejemplo de uso**
 
@@ -138,6 +154,8 @@ export default () => {
 
 ## ProductList
 
+![ProductList](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/ProductList.png)
+
 Se trata de un componente que le da estilos al layout en el que se va a mostrar todos los productos. Unicamente recibe el listado de productos que se van a mostrar y se lo envía al su componente interno `ProductCluster`.
 **Ejemplo de uso**
 
@@ -161,6 +179,8 @@ export default () => {
 | items | object   | true      | -                 |
 
 ## ProductCluster
+
+![ProductCluster](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/ProductCluster.png)
 
 Es un componente interno de `ProductList`. Recibe el listado de productos y los muestra. Es recomendable no utilizarlo por fuera.
 
@@ -201,6 +221,10 @@ export default () => {
 | free_shipping | Boolean  | true      | -                 |
 
 ## Searchbar
+
+![Searchbar](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/Searchbar.png)
+
+Permite que el usuario ingrese un producto que desee buscar y lo envía a la página de resultado de búsqueda.
 
 **Ejemplo de uso**
 

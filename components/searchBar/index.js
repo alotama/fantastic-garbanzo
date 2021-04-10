@@ -28,6 +28,7 @@ const SearchBar = ({search}) => {
                   src={'/Logo_ML.png'}
                   srcSet={'/Logo_ML@2x.png'}
                   alt={'MercadoLibre'}
+                  width={48}
                 />
               </figure>
             </a>
