@@ -275,6 +275,84 @@ export default () => {
 | ------ | -------- | --------- | ----------------- |
 | search | string   | false     | -                 |
 
+# Estilos
+
+Se utiliza al popular `normalize.css` como base para lograr una mayor consistencia del diseño en los diferentes navegadores. A su vez, se usa SASS como pre-procesador por la funcionalidad de crear módulos y variables a lo largo del proyecto y lograr una mejor escalabilidad de los estilos.
+
+Los valores que se utilizaron estan representados en REM, con el `font-size` al 100% (16px).
+
+## Variables
+
+**Colores**
+
+Archivo: `_colors.scss`
+
+```SASS
+$primary: #FFE600;
+$secondary: #3483FA;
+$white: #FFFFFF;
+$black: #333333;
+$grey-1: #666666;
+$grey-2: #999999;
+$grey-3: #EEEEEE;
+```
+
+**Fuentes**
+
+Archivo: `_fonts.scss`
+
+```SASS
+@mixin font-body {
+  font-size: 1rem (16px)
+  line-height: 1.2;
+} 
+@mixin font-detail {
+  font-size: 1rem (12px)
+  line-height: 1;
+} 
+@mixin font-small {
+  font-size: 0.875rem  (14px)
+  line-height: 1.2;
+} 
+@mixin font-big {
+  font-size: 1.125rem (18px)
+  line-height: 1.2;
+} 
+@mixin font-headering 3 {
+  font-size: 1.5rem (24px)
+  line-height: 1.2;
+} 
+@mixin font-headering 2 {
+  font-size: 1.75rem (28px)
+  line-height: 1.2;
+} 
+@mixin font-headering 1 {
+  font-size: 2.875rem (46px)
+  line-height: 1;
+} 
+```
+
+**Mediaquery**
+
+Archivo: `_mediaquery.scss`
+
+```SASS
+$breakpoint-md: 48rem (768px)
+$breakpoint-lg: 62rem (992px)
+$breakpoint-xl: 70rem (1120px)
+```
+
+**Espacios**
+
+Archivo: `_spaces.scss`
+
+```SASS
+$space-xs: 0.5rem (8px)
+$space-sm: 0.75rem (12px) 
+$space-md: 1rem (16px)
+$space-lg: 2rem (32px)
+```
+
 # Variables de entorno
 
 En la base del proyecto se encuentra un archivo llamado `.env-template`, el cuál es utilizado por el comando `npm run refresh_token` para obtener un nuevo `ACCESS_TOKEN`. (Ver más sobre **Configuración de token**)
