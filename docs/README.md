@@ -3,6 +3,31 @@
 
 Se debía que construir y maquetar los componentes necesarios para la realización de las 3 vistas de la aplicación: Caja de búsqueda, Resultado de la búsqueda y Detalle de producto. A su vez, desarrollar 2 endpoints que debían consultar a la API de Mercadolibre para luego utilizar las respuestas en las vistas anterior mencionadas.
 
+## Vistas
+
+![Caja de búsqueda]()
+Caja de búsqueda
+
+![Resultado de la búsqueda]()
+Resultado de la búsqueda
+
+![Detalle de producto]()
+Detalle de producto
+
+## Requisitos tecnológicos
+
+**Cliente:**
+
+- HTML
+- React
+- CSS
+  
+**Servidor:**
+
+- Node >= 10
+- Express
+- Server side rendering
+
 ## Requisitos funcionales
 
 - En la vista de caja de búsqueda, debería poder ingresar el producto a buscar y al enviar el formulario navegar a la vista de Resultados de búsqueda, visualizando solo 4 productos. Luego, al hacer clic sobre uno de ellos, debería navegar a la vista de Detalle de Producto.
@@ -179,8 +204,6 @@ export default () => {
 | items | object   | true      | -                 |
 
 ## ProductCluster
-
-![ProductCluster](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/ProductCluster.png)
 
 Es un componente interno de `ProductList`. Recibe el listado de productos y los muestra. Es recomendable no utilizarlo por fuera.
 
