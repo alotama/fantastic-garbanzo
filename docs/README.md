@@ -1,5 +1,5 @@
 <!-- markdownlint-configure-file { "MD025": false, "MD036": false } -->
-# Descipción del proyecto
+# Introducción
 
 Se debía que construir y maquetar los componentes necesarios para la realización de las 3 vistas de la aplicación: Caja de búsqueda, Resultado de la búsqueda y Detalle de producto. A su vez, desarrollar 2 endpoints que debían consultar a la API de Mercadolibre para luego utilizar las respuestas en las vistas anterior mencionadas.
 
@@ -33,7 +33,9 @@ Detalle de producto
 - En la vista de caja de búsqueda, debería poder ingresar el producto a buscar y al enviar el formulario navegar a la vista de Resultados de búsqueda, visualizando solo 4 productos. Luego, al hacer clic sobre uno de ellos, debería navegar a la vista de Detalle de Producto.
 - Dado un id de producto, debería poder ingresar directamente a la vista de detalle de producto.
 
-# ⚙️ Instalación
+---
+
+# Instalación
 
 ## Tecnologías
 
@@ -82,7 +84,9 @@ npm run refresh_token
 npm run dev
 ```
 
-# 🔒 Autenticación
+---
+
+# Autenticación
 
 Para poder utilizar todas las funcionalidades de la aplicación es necesario previamente obtener un `ACCESS_TOKEN`, el cuál va a ser utilizado para hacer las consultas necesarias a la API.
 
@@ -96,7 +100,9 @@ Este script realiza un llamado cURL para obtener el nuevo token y reemplazar la 
 
 Ver más sobre **variables de entorno**.
 
-# ☁️ Páginas
+---
+
+# Páginas
 
 ## Home
 
@@ -113,6 +119,8 @@ Al ingresar a la página de resultado de búsqueda, ésta realiza una llamada a 
 Una vez el usuario ingresa a la página de detalle de un producto, al igual que en la página de resultado de búsqueda, ésta hace un llamado a la API interna del proyecto con la función de nextjs `getServerSideProps()` al endpoint `/api/items/:id`. El cuál se comunica con la API de Mercadolibre para recibir la función del producto solictado, junto con su descripción y el arbol de la categoría al que corresponde el mismo.
 
 ![Detalle de producto](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/ProductEndpoint.png)
+
+---
 
 # Componentes
 
@@ -275,6 +283,8 @@ export default () => {
 | ------ | -------- | --------- | ----------------- |
 | search | string   | false     | -                 |
 
+---
+
 # Estilos
 
 Se utiliza al popular `normalize.css` como base para lograr una mayor consistencia del diseño en los diferentes navegadores. A su vez, se usa SASS como pre-procesador por la funcionalidad de crear módulos y variables a lo largo del proyecto y lograr una mejor escalabilidad de los estilos.
@@ -352,6 +362,8 @@ $space-sm: 0.75rem (12px)
 $space-md: 1rem (16px)
 $space-lg: 2rem (32px)
 ```
+
+---
 
 # Variables de entorno
 
