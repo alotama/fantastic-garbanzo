@@ -5,13 +5,13 @@ Se debía que construir y maquetar los componentes necesarios para la realizaci�
 
 ## Vistas
 
-![Caja de búsqueda]()
+![Caja de búsqueda](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/01_Buscador.png)
 Caja de búsqueda
 
-![Resultado de la búsqueda]()
+![Resultado de la búsqueda](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/02_Resultados.png)
 Resultado de la búsqueda
 
-![Detalle de producto]()
+![Detalle de producto](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/02_Detalle.png)
 Detalle de producto
 
 ## Requisitos tecnológicos
@@ -42,17 +42,22 @@ Detalle de producto
 - Node.js (v12.22)
 - SASS (v1.32)
 - Jest (v26.6)
+- Testing-library/react (v11.2)
 - Cypress (v7.0)
 
 Debido a la simpleza del proyecto, la misma esta controlada completamente por `Next`. Lo que se espera es que consulte a una API, luego parsear la consulta y dejarla disponible para que el front la utilice. Para el mismo se aprovecha la funcionalida [**API Routes**](https://nextjs.org/blog/next-9#api-routes), que esta disponible desde la versión 9.0 de la librería.
 
 ### ¿Por qué Next.js?
 
-Se trata de una de las librerías basadas en javascript más relevantes para la creación de aplicaciones web con React. Pensada para que los desarrolladores no tengan que hacer pre-configuraciones en el proyecto en el que van a trabajar, la optimización del código viene por default y la versatilidad de poder crear tanto aplicaciones complejas como sitios estáticos, sumado a muchas otros beneficios, la hacen una herramienta perfecta para este proyecto.
+Se trata de una de las librerías basadas en javascript más relevantes para la creación de aplicaciones web con React desde hace más de 3 años. Pensada para que los desarrolladores no tengan que hacer pre-configuraciones en el proyecto en el que van a trabajar, la optimización del código viene por default y la versatilidad de poder crear tanto aplicaciones complejas como sitios estáticos. Sumado a esto, se le agrega la popularidad y el amplio soporte, tanto por ellos mismos como por otros desarrolladores la hacen una herramienta perfecta para este proyecto.
 
-### ¿Por qué Jest?
+### ¿Por qué Jest y Testing-Library?
+
+Jest es una de las mejores librerías para hacer testeos unitarios porque, a comparación de otros frameworks, su sintaxis es mucho más amigable y no hay que hacer una implementación especial para hacer el test. Junto a Testing-library es prácticamente como escribir/leer un libro de instrucciones.
 
 ### ¿Por qué Cypress?
+
+La instalación clara y rápida de la librería y su documentación, en mi opinión, la mejor entre todas las librerías para el testeo de end-to-end. Una de las mejores funcionalidades que tiene es la consola que abre cuando comienza a correr los tests. Te permite ver paso a paso cómo las instrucciones que escribiste van impactando en el navegador. A su vez, cuenta con un amplio soporte que permite resolver cualquier problema que tengas.
 
 ## Inicialización de proyecto
 
@@ -269,28 +274,6 @@ export default () => {
 | Props  | PropType | Requerido | Valor por default |
 | ------ | -------- | --------- | ----------------- |
 | search | string   | false     | -                 |
-
-# Estilos
-
-Se utiliza al popular `normalize.css` como base para lograr una mayor consistencia del diseño en los diferentes navegadores. A su vez, se usa SASS como pre-procesador por su funcionalidad crear módulos y variables a lo largo del proyecto y lograr una mejor escalabilidad de los estilos.
-
-Los valores que se utilizaron estan representados en REM, con el `font-size` al 100% (16px).
-
-## Variables
-
-**Colores**
-
-Archivo: `_colors.scss`
-
-```SASS
-$primary: #FFE600;
-$secondary: #3483FA;
-$white: #FFFFFF;
-$black: #333333;
-$grey-1: #666666;
-$grey-2: #999999;
-$grey-3: #EEEEEE;
-```
 
 # Variables de entorno
 
