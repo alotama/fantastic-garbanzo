@@ -18,7 +18,6 @@ const SearchResultPage = ({ errorCode, categories, items, search }) => {
     >
       <Breadcrumb
         steps={categories}
-        search={search}
       />
       <ProductList
         products={items}

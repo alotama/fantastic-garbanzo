@@ -11,4 +11,4 @@ services:
       - ./public:/home/node/src/public
       - ./styles:/home/node/src/styles
       - ./utils:/home/node/src/utils
-    command: bash -c "./refresh_token.sh && npm install && npm run dev"
+    command: bash -c "./refresh_token.sh && npm run dev"

@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from '../Footer'
-import SearchBar from '../SearchBar'
+import Footer from '@components/Footer'
+import SearchBar from '@components/SearchBar'
 import Head from 'next/head'
 import PropTypes from 'prop-types';
 

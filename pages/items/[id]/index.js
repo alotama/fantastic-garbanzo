@@ -17,7 +17,6 @@ const ProductPage = ({ id, item, errorCode }) => {
     >
       <Breadcrumb
         steps={item.categories}
-        search={id}
       />
       <ProductDetail
         image={item.picture}

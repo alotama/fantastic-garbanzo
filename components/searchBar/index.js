@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import searchBarStyle from './searchBar.module.scss';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 
 const SearchBar = ({search}) => {
   const [inputValue, setInputValue] = useState(search || '')
@@ -60,6 +61,10 @@ const SearchBar = ({search}) => {
       </div>
     </section>
   )
+}
+
+SearchBar.prototype = {
+  search: PropTypes.string,
 }
 
 export default SearchBar;

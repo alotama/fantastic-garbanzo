@@ -25,8 +25,6 @@ Error.getInitialProps = ({ query, asPath, req, res, err }) => {
   const pathID = asPath.match(/.*\/(.*)$/);
   const productID = pathID[1].startsWith('MLA')
 
-  console.log('statusCode ->', statusCode)
-
   return { statusCode, query, productID }
 }
 

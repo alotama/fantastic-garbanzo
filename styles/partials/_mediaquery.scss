@@ -3,7 +3,7 @@ $breakpoint-lg: 62rem;
 $breakpoint-xl: 70rem;
 
 @mixin media-breakpoint-up($name) {
-  @media (min-width: $name) {
+  @media screen and (min-width: $name) {
     @content;
   }
 }
