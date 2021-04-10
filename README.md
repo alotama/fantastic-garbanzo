@@ -23,4 +23,9 @@ npm run refresh_token
 npm run dev
 ```
 
+## Arquitectura general
+
+![Búsqueda de producto](docs/images/SearchEndpoint.png)
+![Detalle de productos](docs/images/ProductEndpoint.png)
+
 **Documentación completa del proyecto:** [Documentación - Sebastián Tamashiro - Challenge Frontend 2021](https://alotama.github.io/fantastic-garbanzo/#/)
