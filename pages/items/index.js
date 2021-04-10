@@ -4,7 +4,7 @@ import ProductList from '@components/ProductList';
 import Breadcrumb from '@components/Breadcrumb';
 import { capitalizeFirstLetter } from '@utils/helpers';
 
-const SearchResult = ({ errorCode, categories, items, search }) => {
+const SearchResultPage = ({ errorCode, categories, items, search }) => {
   if (errorCode) {
     return <Error search={search} statusCode={errorCode} />
   }
@@ -56,7 +56,7 @@ export async function getServerSideProps(params, req, res) {
   } catch (er) {
     console.error({
       "message": "No se obtuvo una respuesta de la API que obtiene el resultado de la búsqueda",
-      "error": "searchResult_error_api",
+      "error": "searchResultPage_error_api",
       "status": er.status,
       "cause": [er.response],
     })
@@ -72,4 +72,4 @@ export async function getServerSideProps(params, req, res) {
 
 }
 
-export default SearchResult;
+export default SearchResultPage;

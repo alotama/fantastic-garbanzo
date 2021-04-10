@@ -72,11 +72,11 @@ En la base del proyecto se encuentra un archivo llamado `.env-template`, el cuá
 
 Con el archivo `.env` generado, se definen las variables de entorno que se van a usar en el proyecto en el archivo `next.config.js` y se agregan más configuraciónes.
 
-| Variable      | Descripción                                                                            |
-| ------------- | -------------------------------------------------------------------------------------- |
-| ACCESS_TOKEN  | Token de autorización para consultar a la API de Mercadolibre                          |
-| API_URL       | URL base de la API de Mercadolibre                                                     |
-| SITE_URL      | La URL del propio proyecto                                                             |
-| RESULTS_LIMIT | Es un número que determina la cantidad de resultados que se va a solicitar a la API    |
-| CACHE_TTL     | La cantidad de segundos que va a durar el cache de los endpoints internos del proyecto |
-| CHECK_PERIOD  | Es el período de tiempo, en segundos, usado para borrar automáticamente el cache       |
+| Variable      | Tipo   | Descripción                                                                            |
+| ------------- | ------ | -------------------------------------------------------------------------------------- |
+| ACCESS_TOKEN  | String | Token de autorización para consultar a la API de Mercadolibre                          |
+| API_URL       | String | URL base de la API de Mercadolibre                                                     |
+| SITE_URL      | String | La URL del propio proyecto                                                             |
+| RESULTS_LIMIT | Number | Es un número que determina la cantidad de resultados que se va a solicitar a la API    |
+| CACHE_TTL     | Number | La cantidad de segundos que va a durar el cache de los endpoints internos del proyecto |
+| CHECK_PERIOD  | Number | Es el período de tiempo, en segundos, usado para borrar automáticamente el cache       |
