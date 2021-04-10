@@ -1,4 +1,11 @@
 <!-- markdownlint-configure-file { "MD025": false, "MD036": false } -->
+# Descipción del proyecto
+
+## Requisitos funcionales
+
+- En la vista de caja de búsqueda, debería poder ingresar el producto a buscar y al enviar el formulario navegar a la vista de Resultados de búsqueda, visualizando solo 4 productos. Luego, al hacer clic sobre uno de ellos, debería navegar a la vista de Detalle de Producto.
+- Dado un id de producto, debería poder ingresar directamente a la vista de detalle de producto.
+
 # ⚙️ Instalación
 
 ## Tecnologías
@@ -6,6 +13,7 @@
 - React.js (v17.0)
 - Next.js (v10.1)
 - Node.js (v12.22)
+- SASS (v1.32)
 
 Debido a la simpleza del proyecto, la misma esta controlada completamente por `Next`. Lo que se espera es que consulte a una API, luego parsear la consulta y dejarla disponible para que el front la utilice. Para el mismo se aprovecha la funcionalida [**API Routes**](https://nextjs.org/blog/next-9#api-routes), que esta disponible desde la versión 9.0 de la librería.
 
@@ -214,6 +222,28 @@ export default () => {
 | Props  | PropType | Requerido | Valor por default |
 | ------ | -------- | --------- | ----------------- |
 | search | string   | false     | -                 |
+
+# Estilos
+
+Se utiliza al popular `normalize.css` como base para lograr una mayor consistencia del diseño en los diferentes navegadores. A su vez, se usa SASS como pre-procesador por su funcionalidad crear módulos y variables a lo largo del proyecto y lograr una mejor escalabilidad de los estilos.
+
+Los valores que se utilizaron estan representados en REM, con el `font-size` al 100% (16px).
+
+## Variables
+
+**Colores**
+
+Archivo: `_colors.scss`
+
+```SASS
+$primary: #FFE600;
+$secondary: #3483FA;
+$white: #FFFFFF;
+$black: #333333;
+$grey-1: #666666;
+$grey-2: #999999;
+$grey-3: #EEEEEE;
+```
 
 # Variables de entorno
 

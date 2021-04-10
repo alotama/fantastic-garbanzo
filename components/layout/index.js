@@ -4,7 +4,7 @@ import SearchBar from '@components/SearchBar'
 import Head from 'next/head'
 import PropTypes from 'prop-types';
 
-const getPageTitle = (title) => ((title && `${title} | `) + 'Sebastián Tamashiro - Challenge')
+const getPageTitle = (title) => ((title && `${title} | `) + 'Sebastián Tamashiro - Challenge Frontend 2021')
 
 const Layout = ({ children, title, description, picture, pageURL, search }) => {
   return (
