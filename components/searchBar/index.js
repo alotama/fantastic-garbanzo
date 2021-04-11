@@ -11,6 +11,7 @@ const SearchBar = ({search}) => {
 
   const searchBarValidation = (e, text) => {
     e.preventDefault()
+ 
     if (text.length > 1) {
       router.push(`/items?search=${text}`)
     }

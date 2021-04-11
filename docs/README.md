@@ -365,6 +365,25 @@ $space-lg: 2rem (32px)
 
 ---
 
+# Tests
+
+## Unitarios
+
+Lorem ipsum
+
+## End-to-End
+
+Lorem ipsum
+
+---
+
+# SEO
+
+- Incluir los test de Lighthouse.
+- Template de título
+- De dónde toma la descripción
+
+---
 # Variables de entorno
 
 En la base del proyecto se encuentra un archivo llamado `.env-template`, el cuál es utilizado por el comando `npm run refresh_token` para obtener un nuevo `ACCESS_TOKEN`. (Ver más sobre **Configuración de token**)
@@ -379,3 +398,57 @@ Con el archivo `.env` generado, se definen las variables de entorno que se van a
 | RESULTS_LIMIT | Number | Es un número que determina la cantidad de resultados que se va a solicitar a la API    |
 | CACHE_TTL     | Number | La cantidad de segundos que va a durar el cache de los endpoints internos del proyecto |
 | CHECK_PERIOD  | Number | Es el período de tiempo, en segundos, usado para borrar automáticamente el cache       |
+
+# Errores conocidos
+
+## Status 403
+
+**Ejemplo**
+```sh
+{
+ message: 'Hubo un error al consultar al endpoint /items/:id de la API de Mercadolibre',
+ error: 'no_reached_items_mercadolibre_api',
+ status: 403,
+ cause: [
+   Response {
+     size: 0,
+     timeout: 0,
+     [Symbol(Body internals)]: [Object],
+     [Symbol(Response internals)]: [Object]
+   }
+ ]
+}
+```
+
+**Causa:** No existe o expiró el ACCESS_TOKEN.
+**Solución:** Si estas levantando el proyecto de forma manual, debes correr el comando `npm run refresh_token`. Si lo haces con docker, con que vuelvas a hacer `docker-compose up` soluciona el problema.
+
+## Status 204
+
+**Ejemplo:**
+
+```sh
+{
+ message: 'No se obtuvo una respuesta de la API que obtiene el resultado de la búsqueda',
+ error: 'searchResultPage_error_api',
+ status: 204,
+ cause: [
+   Response {
+     size: 0,
+     timeout: 0,
+     [Symbol(Body internals)]: [Object],
+     [Symbol(Response internals)]: [Object]
+   }
+ ]
+}
+```
+
+**Causa:** Lo que el usuario buscó no tuvo resultados.
+**Solución:** Al tener levantado el proyecto en modo de desarrollo se van a ver alguno de estos errores en la página:
+
+![Error 1]()
+![Error 2]()
+
+Pero cuando se hace el build del proyecto con `npm run build` y se levanta con en modo de producción `npm run start` se va a mostrar esta página:
+
+![Error Page]()

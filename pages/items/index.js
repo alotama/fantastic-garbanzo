@@ -29,6 +29,7 @@ const SearchResultPage = ({ errorCode, categories, items, search }) => {
 export async function getServerSideProps(params, req, res) {
   try {
     const response = await fetch(`${process.env.SITE_URL}/api/items?q=${params.query.search}`)
+
     if (response.status === 200) {      
       const { categories, items } = await response.json()
       
@@ -49,7 +50,7 @@ export async function getServerSideProps(params, req, res) {
     } else {
       throw {
         status: response.status,
-        response: await response.json()
+        response: response
       };
     }
   } catch (er) {

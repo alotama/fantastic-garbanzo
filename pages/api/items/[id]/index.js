@@ -5,7 +5,7 @@ import { getFilledProductTemplate } from '@utils/parsers'
 import { fetchProductData, fetchProductCategory, fetchProductDescription } from '@utils/fetchers'
 import NodeCache from 'node-cache';
 
-const productPageCache = new NodeCache({ stdTTL: process.env.CACHE_TTL, checkperiod: process.env.CHECK_PERIOD });
+const productPageCache = new NodeCache({ stdTTL: 0, checkperiod: process.env.CHECK_PERIOD });
 
 const getParsedProductPage = async (req, res) => {
   let parsedProductData = {

@@ -30,21 +30,28 @@ const getParsedSearchResultData = async (req, res) => {
       "categories": breadcrumbSearchResult,
       "items": searchResultItems,
     }
-  
-    res.status(200).json(parsedSearchResult)
-    return parsedSearchResult;
+
+    if (searchResultItems.length > 0) {
+      res.status(200).json(parsedSearchResult)
+      return parsedSearchResult;
+    } else {
+      throw {
+        status: 204,
+        cause: 'Empty response'
+      }
+    }
   } catch (e) {
     console.error({
       "message": "No se pudo parsear correctamente la respuesta de la API",
       "error": "unable_to_parse_searchResultData_from_api",
-      "status": 500,
-      "cause": [e],
+      "status": e.status,
+      "cause": [e.cause],
     });
     parsedSearchResult = {
       "categories": breadcrumbSearchResult,
       "items": productTemplate,
     }
-    res.status(500).json(parsedSearchResult)
+    res.status(e.status).json(parsedSearchResult)
   }
 }
 

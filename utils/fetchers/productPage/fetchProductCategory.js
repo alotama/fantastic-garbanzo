@@ -1,7 +1,7 @@
 const FetchProductCategory = async (query, cache) => {
   const productCache = cache.mget(["productCategory"])
-
-  if (productCache && productCache.productCategory && productCache.productCategory.query === query) {
+  
+  if (productCache && productCache.productCategory && productCache.productCategory.id === query) {
     console.log('cache productCategory')
 
     return productCache.productCategory
@@ -16,13 +16,12 @@ const FetchProductCategory = async (query, cache) => {
         }
       })
 
-      let productCategoryResponse = await getProductCategoryResponse
-      if (productCategoryResponse.status === 200) { 
-        let productCategory = productCategoryResponse.json()
+      if (getProductCategoryResponse.status === 200) { 
+        const productCategory = await getProductCategoryResponse.json()
         cache.mset([{ key: 'productCategory', val: productCategory }])
         return productCategory
       } else {
-        throw productCategoryResponse
+        throw getProductCategoryResponse
       }
     } catch (e) {
       console.error({

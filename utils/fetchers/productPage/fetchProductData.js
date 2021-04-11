@@ -1,7 +1,7 @@
 const FetchProductData = async (query, cache) => {
   const productCache = cache.mget(["productData"])
   if (productCache && productCache.productData && productCache.productData.id === query) {
-    console.log('cache productData')
+    console.log('cache data')
     return productCache.productData
   } else {
     console.log('fetch Data')
@@ -13,13 +13,12 @@ const FetchProductData = async (query, cache) => {
         }
       })
 
-      let productDataResponse = await getProductDataResponse
-      if (productDataResponse.status === 200) {
-        const productData = productDataResponse.json()
+      if (getProductDataResponse.status === 200) {
+        const productData = await getProductDataResponse.json()
         cache.mset([{ key: 'productData', val: productData }])
         return productData
       } else {
-        throw productDataResponse
+        throw getProductDataResponse
       }
 
     } catch (e) {

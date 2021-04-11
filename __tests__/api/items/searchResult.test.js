@@ -1,4 +1,4 @@
-import GetParsedData from '../../../pages/api/items'
+import getParsedSearchResultData from '../../../pages/api/items'
 import { searchResultResponseMock, searchResultParsedMock } from 'api/items'
 
 global.fetch = jest.fn(() =>
@@ -20,7 +20,7 @@ describe("Test /api/items?q=", () => {
     const res = {};
     res.status = () => res;
     res.json = () => res;
-    const SearchResultParsed = await GetParsedData(req, res)
+    const SearchResultParsed = await getParsedSearchResultData(req, res)
 
     expect(typeof SearchResultParsed.categories).toBe(typeof searchResultParsedMock.categories)
     expect(typeof SearchResultParsed.items).toBe(typeof searchResultParsedMock.items)

@@ -16,14 +16,13 @@ const fetchProductDescription = async (query, cache) => {
         }
       })
       
-      let productDescriptionResponse = await getProductDescriptionResponse
-      if (productDescriptionResponse.status === 200) { 
-        let productDescription = productDescriptionResponse.json()
+      if (getProductDescriptionResponse.status === 200) { 
+        const productDescription = await getProductDescriptionResponse.json()
         productDescription.query = query
         cache.mset([{ key: 'productDescription', val: productDescription }])
         return productDescription
       } else {
-        throw productDescriptionResponse
+        throw getProductDescriptionResponse
       }
     } catch (e) {
       console.error({
