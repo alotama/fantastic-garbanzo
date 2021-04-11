@@ -425,7 +425,7 @@ Con el archivo `.env` generado, se definen las variables de entorno que se van a
 
 ## Status 204
 
-**Ejemplo:**
+**Ejemplo terminal:**
 
 ```sh
 {
@@ -443,12 +443,13 @@ Con el archivo `.env` generado, se definen las variables de entorno que se van a
 }
 ```
 
+**Ejemplo páginas:**
+
+![Server Error - Dev](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/serverErrorDev.png)
+
 **Causa:** Lo que el usuario buscó no tuvo resultados.
-**Solución:** Al tener levantado el proyecto en modo de desarrollo se van a ver alguno de estos errores en la página:
+**Solución:** Al tener levantado el proyecto en modo de desarrollo, la página muestra el error de arriba, pero en modo de producción muestra la página de error.
 
-![Error 1]()
-![Error 2]()
+Para poder ver la página de error en un entorno local hay que hacer el build del proyecto con `npm run build` y se levantarlo con en modo de producción con `npm run start`.
 
-Pero cuando se hace el build del proyecto con `npm run build` y se levanta con en modo de producción `npm run start` se va a mostrar esta página:
-
-![Error Page]()
+![Server Error - Prod](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/serverErrorProd.png)
