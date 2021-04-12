@@ -9,7 +9,7 @@ const Footer = () => {
             <a href={'https://alotama.github.io/fantastic-garbanzo/#/'}>Documentación</a>
           </article>
           <article>
-            <a href={'www.github.com/alotama'}>
+            <a href={'https://github.com/alotama/fantastic-garbanzo'}>
               Repositiorio
           </a>
           </article>
