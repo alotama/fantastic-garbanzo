@@ -384,6 +384,8 @@ npm run test:watch
 
 Para estos tests, se ejecuta Cypress y realiza todas las acciones de la descripción funcional de la aplicación: hace una búsqueda, ir a la página de resultado e ir a la página de un producto. Además, toma un ID específico y muestra la página de ese producto.
 
+Nota: Para realizar estos tests es necesario tener levantado el proyecto previamente. Esto puede ser con docker o de forma manual.
+
 ```sh
 npm run cypress:open
 o
