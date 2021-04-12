@@ -9,8 +9,8 @@ export const productDescriptionMock = JSON.parse(
   readFileSync(path.join(__dirname, '/productDescription.json')).toString()
 )
 
-export const productCategoryMock = JSON.parse(
-  readFileSync(path.join(__dirname, '/productCategory.json')).toString()
+export const categoryMock = JSON.parse(
+  readFileSync(path.join('./__mocks__/categoryResponse.json')).toString()
 )
 
 export const productParsedDataMock = JSON.parse(

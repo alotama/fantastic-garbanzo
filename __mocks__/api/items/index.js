@@ -8,3 +8,7 @@ export const searchResultResponseMock = JSON.parse(
 export const searchResultParsedMock = JSON.parse(
   readFileSync(path.join(__dirname, '/searchResultParsed.json')).toString()
 )
+
+export const categoryMock = JSON.parse(
+  readFileSync(path.join('./__mocks__/categoryResponse.json')).toString()
+)

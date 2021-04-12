@@ -1,9 +1,9 @@
 import GetParsedProductPage from '../../../../pages/api/items/[id]'
-import { productDataMock, productDescriptionMock, productCategoryMock, productParsedDataMock } from 'api/items/[id]'
+import { productDataMock, productDescriptionMock, categoryMock, productParsedDataMock } from 'api/items/[id]'
 
 global.fetch = jest.fn(() => Promise.resolve({
   status: 200,
-  json: () => Promise.resolve(productCategoryMock)
+  json: () => Promise.resolve(categoryMock)
 })).mockImplementationOnce(() => Promise.resolve({
   status: 200,
   json: () => Promise.resolve(productDataMock)

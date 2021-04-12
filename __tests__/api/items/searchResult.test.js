@@ -1,12 +1,13 @@
 import getParsedSearchResultData from '../../../pages/api/items'
-import { searchResultResponseMock, searchResultParsedMock } from 'api/items'
+import { searchResultResponseMock, searchResultParsedMock, categoryMock } from 'api/items'
 
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    status: 200,
-    json: () => Promise.resolve(searchResultResponseMock),
-  })
-);
+global.fetch = jest.fn(() => Promise.resolve({
+  status: 200,
+  json: () => Promise.resolve(categoryMock)
+})).mockImplementationOnce(() => Promise.resolve({
+  status: 200,
+  json: () => Promise.resolve(searchResultResponseMock)
+}))
 
 beforeEach(() => {
   fetch.mockClear();
