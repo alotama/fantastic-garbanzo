@@ -14,6 +14,7 @@ const getParsedSearchResultData = async (req, res) => {
     "categories": categories,
     "items": [],
   }
+
   try {
     const searchResultResponse = await fetchSearchResult(req.query.q, searchCache)
     const clonedSearchResultResponse = cloneObject(searchResultResponse)
@@ -39,7 +40,6 @@ const getParsedSearchResultData = async (req, res) => {
 
     if (searchResultItems.length > 0) {
       res.status(200).json(parsedSearchResult)
-      return parsedSearchResult;
     } else {
       throw {
         status: 204,
@@ -59,7 +59,6 @@ const getParsedSearchResultData = async (req, res) => {
       "status": e.status
     }
     res.status(e.status).json(parsedSearchResult)
-    return parsedSearchResult
   }
 }
 
