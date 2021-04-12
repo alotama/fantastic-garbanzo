@@ -30,6 +30,7 @@ const SearchBar = ({search}) => {
                   srcSet={'/Logo_ML@2x.png'}
                   alt={'MercadoLibre'}
                   width={48}
+                  height={32}
                 />
               </figure>
             </a>
@@ -56,6 +57,8 @@ const SearchBar = ({search}) => {
                 src={'/ic_Search.png'}
                 srcSet={'/ic_Search@2x.png'}
                 alt={'Buscar'}
+                height={18}
+                width={18}
               />
             </button>
           </form>

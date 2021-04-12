@@ -18,15 +18,18 @@ const FetchProductData = async (query, cache) => {
         cache.mset([{ key: 'productData', val: productData }])
         return productData
       } else {
-        throw getProductDataResponse
+        throw {
+          status: getProductDataResponse.status,
+          cause: getProductDataResponse
+        }
       }
 
     } catch (e) {
       console.error({
         "message": "Hubo un error al consultar al endpoint /items/:id de la API de Mercadolibre",
         "error": "no_reached_items_mercadolibre_api",
-        "status": 403,
-        "cause": [e],
+        "status": e.status,
+        "cause": [e.cause],
       })
     }
   }

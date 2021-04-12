@@ -21,14 +21,17 @@ const FetchProductCategory = async (query, cache) => {
         cache.mset([{ key: 'productCategory', val: productCategory }])
         return productCategory
       } else {
-        throw getProductCategoryResponse
+        throw {
+          status: getProductCategoryResponse.status,
+          cause: getProductCategoryResponse
+        }
       }
     } catch (e) {
       console.error({
         "message": "Hubo un error al consultar al endpoint /category/:id de la API de Mercadolibre",
         "error": "no_reached_items_category_mercadolibre_api",
-        "status": 403,
-        "cause": [e],
+        "status": e.status,
+        "cause": [e.cause],
       })
     }
   }

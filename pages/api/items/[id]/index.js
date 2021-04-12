@@ -14,14 +14,14 @@ const getParsedProductPage = async (req, res) => {
   }
 
   try {
-    let productDataResponse = await fetchProductData(req.query.id, productPageCache)
-    let clonedItem = cloneObject(productDataResponse)
-    let ProductDescriptionResponse = await fetchProductDescription(req.query.id, productPageCache)
-    let productCategoryResponse = await fetchProductCategory(clonedItem.category_id, productPageCache)
+    const productDataResponse = await fetchProductData(req.query.id, productPageCache)
+    const clonedItem = cloneObject(productDataResponse)
+    const ProductDescriptionResponse = await fetchProductDescription(req.query.id, productPageCache)
+    const productCategoryResponse = await fetchProductCategory(clonedItem.category_id, productPageCache)
     const clonedProductTemplate = cloneObject(productTemplate)
-    let clonedItemDescription = cloneObject(ProductDescriptionResponse)
-    let clonedItemCategory = cloneObject(productCategoryResponse)
-    let asignedProductTemplate = getFilledProductTemplate(clonedProductTemplate, clonedItem, "productDetail")
+    const clonedItemDescription = cloneObject(ProductDescriptionResponse)
+    const clonedItemCategory = cloneObject(productCategoryResponse)
+    const asignedProductTemplate = getFilledProductTemplate(clonedProductTemplate, clonedItem, "productDetail")
 
     asignedProductTemplate.condition = getTranslatedCondition(clonedItem.condition)
     asignedProductTemplate.sold_quantity = clonedItem.sold_quantity,
@@ -38,10 +38,11 @@ const getParsedProductPage = async (req, res) => {
     console.error({
       "message": "No se pudo parsear correctamente la respuesta de la API",
       "error": "unable_to_parse_productData_from_api",
-      "status": 500,
+      "status": e.status,
       "cause": [e],
     })
-    res.status(500).json(parsedProductData)
+    res.status(e.status).json(parsedProductData)
+    return parsedProductData
   }
 }
 

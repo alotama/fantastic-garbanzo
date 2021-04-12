@@ -1,12 +1,13 @@
+import searchBarContext from '@components/SearchBar/searchBarContext'
 import { stringNormalize } from '@utils/helpers'
 
 const fetchSearchResult = async (query, cache) => {
-  const searchResultCache = cache.get("searchResult")
+  const searchResultCache = cache.mget(["searchResult"])
   const queryNormalized = stringNormalize(query)
 
-  if (searchResultCache && searchResultCache.query === query) {
+  if (searchResultCache && searchResultCache.searchResult && searchResultCache.searchResult.query === query) {
     console.log('cache')
-    return searchResultCache
+    return searchResultCache.searchResult
   } else {
     console.log('fetch')
     try {
@@ -19,7 +20,7 @@ const fetchSearchResult = async (query, cache) => {
 
       if (getSearchResultResponse.status === 200) {        
         const searchResult = await getSearchResultResponse.json()
-        cache.set('searchResult', searchResult)
+        cache.mset([{ key: 'searchResult', val: searchResult }])        
         return searchResult;
       } else {
         throw {

@@ -1,5 +1,5 @@
 import fetchProductData from './productPage/fetchProductData'
-import fetchProductCategory from './productPage/fetchProductCategory'
+import fetchProductCategory from './breadcrumb/fetchCategory'
 import fetchProductDescription from './productPage/fetchProductDescription'
 import fetchSearchResult from './searchResult/getSearchResult'
 

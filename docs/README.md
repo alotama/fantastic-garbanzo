@@ -369,11 +369,32 @@ $space-lg: 2rem (32px)
 
 ## Unitarios
 
-Lorem ipsum
+Con Jest, se hacen mocks de la respuesta de la API de Mercadolibre junto a la respuesta parseada esperada de los endpoints de la aplicación. Una vez hecho eso, se ejecutan las funciones que parsean la información y se comparan los tipos de dato con los del mock.
+
+```sh
+npm run test
+
+o
+
+npm run test:watch
+```
+
+**test:** Ejecuta todos los test de una sola vez.
+**test:watch**: Ejecuta todos los tests si detecta que hubo un cambio en el proyecto.
 
 ## End-to-End
 
-Lorem ipsum
+Para estos tests, se ejecuta Cypress y realiza todas las acciones de la descripción funcional de la aplicación. Hacer una búsqueda, ir a la página de resultado e ir a la página de un producto. Además, toma un ID específico y muestra la página de ese producto.
+
+```sh
+npm run cypress:open
+o
+npm run cypress:run
+```
+
+**cypress:open:** Ejecuta Cypress y abre una ventana con todos los tests para que selecciones cuál de todos querés correr.
+**Cypress:run:** Ejecuta todos los tests desde la consola.
+
 
 ---
 
@@ -421,6 +442,7 @@ Con el archivo `.env` generado, se definen las variables de entorno que se van a
 ```
 
 **Causa:** No existe o expiró el ACCESS_TOKEN.
+
 **Solución:** Si estas levantando el proyecto de forma manual, debes correr el comando `npm run refresh_token`. Si lo haces con docker, con que vuelvas a hacer `docker-compose up` soluciona el problema.
 
 ## Status 204
@@ -448,6 +470,7 @@ Con el archivo `.env` generado, se definen las variables de entorno que se van a
 ![Server Error - Dev](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/serverErrorDev.png)
 
 **Causa:** Lo que el usuario buscó no tuvo resultados.
+
 **Solución:** Al tener levantado el proyecto en modo de desarrollo, la página muestra el error de arriba, pero en modo de producción muestra la página de error.
 
 Para poder ver la página de error en un entorno local hay que hacer el build del proyecto con `npm run build` y se levantarlo con en modo de producción con `npm run start`.

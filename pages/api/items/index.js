@@ -2,7 +2,7 @@
 import { AuthorTemplate, productTemplate } from '@utils/template';
 import { cloneObject } from '@utils/helpers';
 import { getBasicItemFormat } from '@utils/parsers';
-import { fetchSearchResult } from '@utils/fetchers';
+import { fetchSearchResult, fetchProductCategory } from '@utils/fetchers';
 import NodeCache from 'node-cache';
 
 const searchCache = new NodeCache({ stdTTL: process.env.CACHE_TTL, checkperiod: process.env.CHECK_PERIOD });
@@ -21,9 +21,12 @@ const getParsedSearchResultData = async (req, res) => {
     const searchResultItems = getBasicItemFormat(clonedSearchResult.results || [])
     
     const getFilterCategories = clonedSearchResult.available_filters && clonedSearchResult.available_filters.find(element => element.id === "category")
+    
     if (getFilterCategories) {
       const sortedCategories = getFilterCategories.values.sort((pre, post) => parseFloat(post.results) - parseFloat(pre.results))
-      breadcrumbSearchResult = sortedCategories.map(element => element.name)
+      const clonedCategories = cloneObject(sortedCategories)
+      const productCategoryResponse = await fetchProductCategory(clonedCategories[0].id, searchCache)
+      breadcrumbSearchResult = productCategoryResponse.path_from_root.map(category => category.name)
     }
 
     parsedSearchResult = {
@@ -44,14 +47,16 @@ const getParsedSearchResultData = async (req, res) => {
     console.error({
       "message": "No se pudo parsear correctamente la respuesta de la API",
       "error": "unable_to_parse_searchResultData_from_api",
-      "status": e.status,
-      "cause": [e.cause],
+      "status": e.status || '',
+      "cause": [e],
     });
     parsedSearchResult = {
       "categories": breadcrumbSearchResult,
       "items": productTemplate,
+      "status": e.status
     }
     res.status(e.status).json(parsedSearchResult)
+    return parsedSearchResult
   }
 }
 

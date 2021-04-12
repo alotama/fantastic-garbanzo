@@ -5,18 +5,18 @@
     border-bottom: 1px solid $grey-3;
   }
   @include media-breakpoint-up($breakpoint-lg) {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: $space-md;
     padding: $space-md 0;
   }
 }
 
 .imageContainer {
-  @include media-breakpoint-up($breakpoint-lg) {
-    margin-right: $space-md;
-  }
+  grid-column: 1/2;
   & > img {
-    height: 11.25rem;
-    width: 11.25rem;
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -25,6 +25,7 @@
   display: flex;
   flex-flow: wrap-reverse;
   @include media-breakpoint-up($breakpoint-lg) {
+    grid-column: 2/5;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }

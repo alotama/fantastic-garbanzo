@@ -1,5 +1,6 @@
 const index = [0, 1, 2, 3]
 const indexCluster = Math.floor(Math.random() * index.length);
+let productID
 
 const BasicFlowTest = () => {
   it('Should visit home page', () => {
@@ -14,21 +15,21 @@ const homeTest = () => (
   it('Should type in the search input and click in search button', () => {
     cy.get('[data-cy=integration-search-input]').type('telefono').click()
     cy.get('[data-cy=integration-search-button]').click()
+    cy.url().should('include', '/items?search=telefono')
   })
 )
 const SearchResultTest = () => (
   it('Should be able to click a product cluster', () => {
     cy.url().should('include', '/items?search=telefono')
-    cy.get(`[data-cy=integration-productCluster-${indexCluster}]`).click()
+    cy.get(`[data-cy=integration-productCluster-${indexCluster}]`).click().should('have.attr', 'href').then(url => {
+      productID = url
+      cy.visit(url)
+    })
   })
 )
 const ProductPageTest = () => (
   it('Should navigate from search result page to product page', () => {
-    cy.url().should('include', '/items?search=telefono')
-    cy.get(`[data-cy=integration-productCluster-${indexCluster}]`).should('have.attr', 'href').then((href) => {
-      cy.visit(href)
-      cy.url().should('include', href)
-    })
+    cy.url().should('include', `${productID}`)
     cy.get(`[data-cy=integration-product-buy-button]`).should('be.visible')
   })
 )

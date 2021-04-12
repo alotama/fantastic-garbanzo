@@ -8,12 +8,14 @@ const ProductCluster = ({ title, id, index, image, price, location, free_shippin
       pathname: '/items/[id]',
       query: { id: id },
     }}>
-      <a data-cy={`integration-productCluster-${index}`}>
-        <li className={ProductClusterStyles.container}>
+      <li>
+        <a data-cy={`integration-productCluster-${index}`} className={ProductClusterStyles.container}>
           <figure className={ProductClusterStyles.imageContainer}>
             <img
               src={image}
               alt={title}
+              width={180}
+              height={180}
             />
           </figure>
           <section className={ProductClusterStyles.informationContainer}>
@@ -26,6 +28,8 @@ const ProductCluster = ({ title, id, index, image, price, location, free_shippin
                       src={'/ic_shipping.png'}
                       srcSet={'/ic_shipping@2x.png'}
                       alt={'Envío gratis'}
+                      width={16}
+                      height={16}
                     />
                   </figure>
                 }
@@ -36,19 +40,19 @@ const ProductCluster = ({ title, id, index, image, price, location, free_shippin
               <small className={ProductClusterStyles.location}>{location}</small>
             </article>
           </section>
-        </li>
-      </a>
+        </a>
+      </li>
     </Link>
   )
 }
 
 ProductCluster.prototype = {
-  title: PropTypes.string.isRequired, 
-  id: PropTypes.string.isRequired, 
-  index: PropTypes.number, 
-  image: PropTypes.string.isRequired, 
-  price: PropTypes.string.isRequired, 
-  location: PropTypes.string.isRequired, 
+  title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  index: PropTypes.number,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
   free_shipping: PropTypes.bool
 }
 
