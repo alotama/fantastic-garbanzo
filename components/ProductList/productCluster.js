@@ -4,11 +4,11 @@ import ProductClusterStyles from './productCluster.module.scss'
 import PropTypes from 'prop-types';
 const ProductCluster = ({ title, id, index, image, price, location, free_shipping }) => {
   return (
-    <Link href={{
-      pathname: '/items/[id]',
-      query: { id: id },
-    }}>
-      <li>
+    <li>
+      <Link href={{
+        pathname: '/items/[id]',
+        query: { id: id },
+      }}>
         <a data-cy={`integration-productCluster-${index}`} className={ProductClusterStyles.container}>
           <figure className={ProductClusterStyles.imageContainer}>
             <img
@@ -41,8 +41,8 @@ const ProductCluster = ({ title, id, index, image, price, location, free_shippin
             </article>
           </section>
         </a>
-      </li>
-    </Link>
+      </Link>
+    </li>
   )
 }
 
