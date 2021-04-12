@@ -47,7 +47,7 @@ Detalle de producto
 - Testing-library/react (v11.2)
 - Cypress (v7.0)
 
-El proyecto es constrolado completamente por `Next`. Lo que se espera es que consulte a una API, luego parsear la consulta y dejarla disponible para que el front la utilice. Para el mismo se aprovecha la funcionalidad [**API Routes**](https://nextjs.org/blog/next-9#api-routes), que esta disponible desde la versión 9.0 de la librería.
+El proyecto es controlado completamente por `Next`. Lo que se espera es que consulte a una API, luego parsear la consulta y dejarla disponible para que el front la utilice. Para el mismo se aprovecha la funcionalidad [**API Routes**](https://nextjs.org/blog/next-9#api-routes), que esta disponible desde la versión 9.0 de la librería.
 
 ### ¿Por qué Next.js?
 
