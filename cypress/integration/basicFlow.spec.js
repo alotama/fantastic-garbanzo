@@ -21,7 +21,7 @@ const homeTest = () => (
 const SearchResultTest = () => (
   it('Should be able to click a product cluster', () => {
     cy.url().should('include', '/items?search=telefono')
-    cy.get(`[data-cy=integration-productCluster-${indexCluster}]`).click().should('have.attr', 'href').then(url => {
+    cy.get(`[data-cy=integration-productCluster-${indexCluster}]`).scrollIntoView().children('a').should('have.attr', 'href').then(url => {
       productID = url
       cy.visit(url)
     })
