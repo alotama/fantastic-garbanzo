@@ -373,9 +373,7 @@ Con Jest, se hacen mocks de la respuesta de la API de Mercadolibre junto a la re
 
 ```sh
 npm run test
-
 o
-
 npm run test:watch
 ```
 
@@ -398,11 +396,44 @@ npm run cypress:run
 
 ---
 
-# SEO
+# Performance y SEO
 
-- Incluir los test de Lighthouse.
-- Template de título
-- De dónde toma la descripción
+## Lighthouse
+
+**Home (Mobile)**
+
+![Home performance](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/Performance_Home.png)
+
+**Página de resultado (Mobile)**
+
+![Lighthouse Resultado](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/Performance_SeachMobile.png)
+
+Nota: La categoría de buenas prácticas bajo a un 80 porque las imagenes que se usaron estan en baja resolución.
+
+**Detalle de producto (Mobile)**
+
+![LightHouse Producto](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/Performance_ProductMobile.png)
+
+Nota: La categoría de buenas prácticas bajo a un 80 porque la imagen que se uso para mostrar al producto esta en baja resolución y porque la url de la imagen no es https.
+
+## Componente
+
+Al comienzo de cada página se incluye el componente `<Layout />`, el cuál a la vez de traer el header y un pequeño footer, también se agrega algunos meta tags básicos.
+
+**Template de título:** (`${title} | `) Sebastián Tamashiro - Challenge Frontend 2021
+
+| Props       | Descripción                                                                                                   |
+| ----------- | ------------------------------------------------------------------------------------------------------------- |
+| children    | Es el contenido de la página                                                                                  |
+| title       | Si se envía esta prop, la incluye para la contrucción del título de la página                                 |
+| description | Además de usarse para el tag de la descripción de la página, se usa para el og:description                    |
+| picture     | Se utiliza fundamentalmente en la página de producto. Toma la imagen del mismo para utilizarlo en el og:image |
+| pageURL     | En el caso de usarse esta prop, debe pasarse el subdirectorio sin /                                           |
+| search      | Se puede usar para enviarle al componente `<SearchBar />` la búsqueda del usuario                             |
+
+
+
+
 
 ---
 # Variables de entorno
