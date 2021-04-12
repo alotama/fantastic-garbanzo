@@ -8,29 +8,32 @@ import NodeCache from 'node-cache';
 const searchCache = new NodeCache({ stdTTL: process.env.CACHE_TTL, checkperiod: process.env.CHECK_PERIOD });
 
 const getParsedSearchResultData = async (req, res) => {
-  let breadcrumbSearchResult = []
+  let categories = []
   let parsedSearchResult = {
     AuthorTemplate,
-    "categories": breadcrumbSearchResult,
+    "categories": categories,
     "items": [],
   }
   try {
-    let fetchSearchResponse = await fetchSearchResult(req.query.q, searchCache)
+    const searchResultResponse = await fetchSearchResult(req.query.q, searchCache)
+    const clonedSearchResultResponse = cloneObject(searchResultResponse)
+    const searchResultItems = getBasicItemFormat(clonedSearchResultResponse.results || [])
+    const getFilterCategories = clonedSearchResultResponse.available_filters && clonedSearchResultResponse.available_filters.find(element => element.id === "category")
 
-    let clonedSearchResult = cloneObject(fetchSearchResponse)
-    const searchResultItems = getBasicItemFormat(clonedSearchResult.results || [])
-    
-    const getFilterCategories = clonedSearchResult.available_filters && clonedSearchResult.available_filters.find(element => element.id === "category")
-    
+    /*
+      Se checkea que venga el filtro por categoría porque, en algunas búsquedas, la API
+      no devuelve esta parámetro y rompe la aplicación. En esos casos, se envía el un array vacío.
+    */
+
     if (getFilterCategories) {
       const sortedCategories = getFilterCategories.values.sort((pre, post) => parseFloat(post.results) - parseFloat(pre.results))
-      const clonedCategories = cloneObject(sortedCategories)
-      const productCategoryResponse = await fetchProductCategory(clonedCategories[0].id, searchCache)
-      breadcrumbSearchResult = productCategoryResponse.path_from_root.map(category => category.name)
+      const clonedSortedCategories = cloneObject(sortedCategories)
+      const productCategoryResponse = await fetchProductCategory(clonedSortedCategories[0].id, searchCache)
+      categories = productCategoryResponse.path_from_root.map(category => category.name)
     }
 
     parsedSearchResult = {
-      "categories": breadcrumbSearchResult,
+      "categories": categories,
       "items": searchResultItems,
     }
 
@@ -51,7 +54,7 @@ const getParsedSearchResultData = async (req, res) => {
       "cause": [e],
     });
     parsedSearchResult = {
-      "categories": breadcrumbSearchResult,
+      "categories": categories,
       "items": productTemplate,
       "status": e.status
     }

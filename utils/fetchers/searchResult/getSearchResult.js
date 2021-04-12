@@ -5,10 +5,8 @@ const fetchSearchResult = async (query, cache) => {
   const queryNormalized = stringNormalize(query)
 
   if (searchResultCache && searchResultCache.searchResult && searchResultCache.searchResult.query === query) {
-    console.log('cache')
     return searchResultCache.searchResult
   } else {
-    console.log('fetch')
     try {
       let getSearchResultResponse = await fetch(`${process.env.API_URL}sites/MLA/search?q=${queryNormalized}&nano&limit=${process.env.LIMIT_RESULT}`, {
         method: 'GET',

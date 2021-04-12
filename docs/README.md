@@ -47,19 +47,19 @@ Detalle de producto
 - Testing-library/react (v11.2)
 - Cypress (v7.0)
 
-Debido a la simpleza del proyecto, la misma esta controlada completamente por `Next`. Lo que se espera es que consulte a una API, luego parsear la consulta y dejarla disponible para que el front la utilice. Para el mismo se aprovecha la funcionalida [**API Routes**](https://nextjs.org/blog/next-9#api-routes), que esta disponible desde la versión 9.0 de la librería.
+El proyecto es constrolado completamente por `Next`. Lo que se espera es que consulte a una API, luego parsear la consulta y dejarla disponible para que el front la utilice. Para el mismo se aprovecha la funcionalidad [**API Routes**](https://nextjs.org/blog/next-9#api-routes), que esta disponible desde la versión 9.0 de la librería.
 
 ### ¿Por qué Next.js?
 
-Se trata de una de las librerías basadas en javascript más relevantes para la creación de aplicaciones web con React desde hace más de 3 años. Pensada para que los desarrolladores no tengan que hacer pre-configuraciones en el proyecto en el que van a trabajar, la optimización del código viene por default y la versatilidad de poder crear tanto aplicaciones complejas como sitios estáticos. Sumado a esto, se le agrega la popularidad y el amplio soporte, tanto por ellos mismos como por otros desarrolladores la hacen una herramienta perfecta para este proyecto.
+Se trata de una de las librerías basadas en javascript más relevantes para la creación de aplicaciones web con React desde hace más de 3 años. Pensada para que los desarrolladores no tengan que hacer pre-configuraciones en el proyecto en el que van a trabajar, la optimización del código viene por default y también la versatilidad de poder crear aplicaciones complejas, tanto como sitios estáticos. Sumado a esto, se le agrega la popularidad y el amplio soporte: los desarrolladores de esta librería, y también los que la utilizan, la convierten en una herramienta perfecta para este proyecto.
 
 ### ¿Por qué Jest y Testing-Library?
 
-Jest es una de las mejores librerías para hacer testeos unitarios porque, a comparación de otros frameworks, su sintaxis es mucho más amigable y no hay que hacer una implementación especial para hacer el test. Junto a Testing-library es prácticamente como escribir/leer un libro de instrucciones.
+Jest es una librería para testeos unitarios desarrollado por Facebook. Suele utilizarse en proyectos en los que se usa React ya que no es necesario instalar muchas dependencias extras para hacer que sean compatibles. Aún así, suele utilizarse junto a Testing-library porque facilita la selección de un componente.
 
 ### ¿Por qué Cypress?
 
-La instalación clara y rápida de la librería y su documentación, en mi opinión, la mejor entre todas las librerías para el testeo de end-to-end. Una de las mejores funcionalidades que tiene es la consola que abre cuando comienza a correr los tests. Te permite ver paso a paso cómo las instrucciones que escribiste van impactando en el navegador. A su vez, cuenta con un amplio soporte que permite resolver cualquier problema que tengas.
+Una instalación rápida, la clara documentación y su popularidad, que se traduce en un mayor soporte, la hacen una buena opción para desarrollar tests End-to-End. Frente a otras librerías que realizan esta misma tarea, tiene una menor curva de aprendizaje. A su vez, la posibilidad de poder ver paso a paso lo que van haciendo los tests a medida que los vas escribiendo, la hacen una herramienta muy interactiva y fácil de comprender.
 
 ## Inicialización de proyecto
 
@@ -90,11 +90,11 @@ npm run dev
 
 Para poder utilizar todas las funcionalidades de la aplicación es necesario previamente obtener un `ACCESS_TOKEN`, el cuál va a ser utilizado para hacer las consultas necesarias a la API.
 
-Este token tiene una expiración de 6 horas desde que se solicita, por lo que es necesario luego de ese tiempo solicitar uno nuevo mediante el comando `npm run refresh_token`. Otra opción es volver a levantar levantar la aplicación con docker usando `docker-compose up`.
+Este token tiene una expiración de 6 horas desde que se solicita, por lo que es necesario luego de ese tiempo solicitar uno nuevo mediante el comando `npm run refresh_token`. Otra opción es volver a levantar la aplicación con docker usando `docker-compose up`.
 
 ## Generación de token
 
-Como se mencionó anteriormente, con el comando `npm run refresh_token` genera un nuevo `ACCESS_TOKEN` para ser utilizado para consultar a la API de Mercadolibre. Este comando a su vez ejecuta el archivo bash `refresh_token.sh`.
+Como se mencionó anteriormente, el comando `npm run refresh_token` genera un nuevo `ACCESS_TOKEN`, utilizado para consultar a la API de Mercadolibre. Este comando a su vez ejecuta el archivo `refresh_token.sh`, en la carpeta base del proyecto.
 
 Este script realiza un llamado cURL para obtener el nuevo token y reemplazar la variable `${ACCESS_TOKEN}` del archivo `.env-template` y escribir el archivo `.env`, el cuál es finalmente utilizado por la aplicación.
 
@@ -110,13 +110,13 @@ Esta página unicamente alberga al buscador, el cuál se va a repetir en el rest
 
 ## Resultado de búsqueda
 
-Al ingresar a la página de resultado de búsqueda, ésta realiza una llamada a la API interna con la función de nextjs, `getServerSideProps()` al endpooint `/api/items?q:query`. El cuál se comunica con la API de Mercadolibre para que le envíe **únicamente 4 resultados**. Una vez recibidos, el endpoint parsea la información y se la entrega a la página para que sea mostrada al usuario.
+Al ingresar a la página de resultado de búsqueda, ésta realiza una llamada a la API interna con la función de next.js, `getServerSideProps()` al endpoint `/api/items?q:query`. Éste se comunica con la API de Mercadolibre para que le envíe **únicamente 4 resultados**. Una vez recibidos, el endpoint parsea la información y se la entrega a la página para que sea mostrada al usuario.
 
 ![Búsqueda de productos](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/SearchEndpoint.png)
 
 ## Detalle de producto
 
-Una vez el usuario ingresa a la página de detalle de un producto, al igual que en la página de resultado de búsqueda, ésta hace un llamado a la API interna del proyecto con la función de nextjs `getServerSideProps()` al endpoint `/api/items/:id`. El cuál se comunica con la API de Mercadolibre para recibir la función del producto solictado, junto con su descripción y el arbol de la categoría al que corresponde el mismo.
+Una vez el usuario ingresa a la página de detalle de un producto, al igual que en la página de resultado de búsqueda, ésta hace un llamado a la API interna del proyecto con la función de next.js `getServerSideProps()` al endpoint `/api/items/:id`. El cuál se comunica con la API de Mercadolibre para recibir la función del producto solictado, junto con su descripción y el árbol de la categoría al que corresponde el mismo.
 
 ![Detalle de producto](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/ProductEndpoint.png)
 
@@ -128,7 +128,7 @@ Una vez el usuario ingresa a la página de detalle de un producto, al igual que 
 
 ![Breadcrumb](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/Breadcrumb.png)
 
-En la página de resultado de búsqueda, debe armarse basado en la categoría que más resultados obtuvo. En la de detalle de producto debe armarse con la categoría propia del item.
+En la página de resultado de búsqueda, el breadcrumb debe armarse basado en la categoría que más resultados obtuvo. En la página de detalle de producto debe armarse con la categoría propia del item.
 
 **Ejemplo de uso**
 
@@ -194,7 +194,7 @@ export default () => {
 
 ![ProductList](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/ProductList.png)
 
-Se trata de un componente que le da estilos al layout en el que se va a mostrar todos los productos. Unicamente recibe el listado de productos que se van a mostrar y se lo envía al su componente interno `ProductCluster`.
+Se trata de un componente que le da estilos al layout en el que se va a mostrar todos los productos. Únicamente recibe el listado de productos que se van a mostrar y se lo envía a su componente interno `ProductCluster`.
 **Ejemplo de uso**
 
 ```jsx
@@ -218,7 +218,7 @@ export default () => {
 
 ## ProductCluster
 
-Es un componente interno de `ProductList`. Recibe el listado de productos y los muestra. Es recomendable no utilizarlo por fuera.
+Es un componente interno de `ProductList`. Recibe el listado de productos y los muestra. Es recomendable no utilizarlo de manera aislada.
 
 **Ejemplo de uso**
 
@@ -260,7 +260,7 @@ export default () => {
 
 ![Searchbar](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/Searchbar.png)
 
-Permite que el usuario ingrese un producto que desee buscar y lo envía a la página de resultado de búsqueda.
+Permite que el usuario ingrese un producto que desea buscar y lo envía a la página de resultado de búsqueda.
 
 **Ejemplo de uso**
 
@@ -287,7 +287,7 @@ export default () => {
 
 # Estilos
 
-Se utiliza al popular `normalize.css` como base para lograr una mayor consistencia del diseño en los diferentes navegadores. A su vez, se usa SASS como pre-procesador por la funcionalidad de crear módulos y variables a lo largo del proyecto y lograr una mejor escalabilidad de los estilos.
+Se utiliza al popular `normalize.css` como base para lograr una mayor consistencia del diseño de la página en los diferentes navegadores. A su vez, se usa SASS como pre-procesador por la funcionalidad de crear módulos y variables a lo largo del proyecto y lograr una mejor escalabilidad de los estilos.
 
 Los valores que se utilizaron estan representados en REM, con el `font-size` al 100% (16px).
 
@@ -377,12 +377,12 @@ o
 npm run test:watch
 ```
 
-**test:** Ejecuta todos los test de una sola vez.
-**test:watch**: Ejecuta todos los tests si detecta que hubo un cambio en el proyecto.
+- **test:** Ejecuta todos los tests de una sola vez.
+- **test:watch**: Ejecuta todos los tests si detecta que hubo un cambio en el proyecto.
 
 ## End-to-End
 
-Para estos tests, se ejecuta Cypress y realiza todas las acciones de la descripción funcional de la aplicación. Hacer una búsqueda, ir a la página de resultado e ir a la página de un producto. Además, toma un ID específico y muestra la página de ese producto.
+Para estos tests, se ejecuta Cypress y realiza todas las acciones de la descripción funcional de la aplicación: hace una búsqueda, ir a la página de resultado e ir a la página de un producto. Además, toma un ID específico y muestra la página de ese producto.
 
 ```sh
 npm run cypress:open
@@ -390,9 +390,8 @@ o
 npm run cypress:run
 ```
 
-**cypress:open:** Ejecuta Cypress y abre una ventana con todos los tests para que selecciones cuál de todos querés correr.
-**Cypress:run:** Ejecuta todos los tests desde la consola.
-
+- **cypress:open:** Ejecuta Cypress y abre una ventana con todos los tests para seleccionar cuál de todos se desea correr.
+- **Cypress:run:** Ejecuta todos los tests desde la consola.
 
 ---
 
@@ -408,17 +407,17 @@ npm run cypress:run
 
 ![Lighthouse Resultado](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/Performance_SeachMobile.png)
 
-Nota: La categoría de buenas prácticas bajo a un 80 porque las imagenes que se usaron estan en baja resolución.
+Nota: La categoría de buenas prácticas bajó a un 80 ya que las imagenes que se usaron estan en baja resolución.
 
 **Detalle de producto (Mobile)**
 
 ![LightHouse Producto](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/Performance_ProductMobile.png)
 
-Nota: La categoría de buenas prácticas bajo a un 80 porque la imagen que se uso para mostrar al producto esta en baja resolución y porque la url de la imagen no es https.
+Nota: La categoría de buenas prácticas bajó a un 80 ya que la imagen que se uso para mostrar al producto esta en baja resolución y porque la url de la imagen no es HTTPS.
 
 ## Componente
 
-Al comienzo de cada página se incluye el componente `<Layout />`, el cuál a la vez de traer el header y un pequeño footer, también se agrega algunos meta tags básicos.
+Al comienzo de cada página se incluye el componente `<Layout />`, el cuál a la vez de traer el header y un pequeño footer, también agrega algunos meta tags básicos.
 
 **Template de título:** (`${title} | `) Sebastián Tamashiro - Challenge Frontend 2021
 
@@ -428,14 +427,11 @@ Al comienzo de cada página se incluye el componente `<Layout />`, el cuál a la
 | title       | Si se envía esta prop, la incluye para la contrucción del título de la página                                 |
 | description | Además de usarse para el tag de la descripción de la página, se usa para el og:description                    |
 | picture     | Se utiliza fundamentalmente en la página de producto. Toma la imagen del mismo para utilizarlo en el og:image |
-| pageURL     | En el caso de usarse esta prop, debe pasarse el subdirectorio sin /                                           |
+| pageURL     | En el caso de usarse esta prop, debe enviarse el subdirectorio sin /                                          |
 | search      | Se puede usar para enviarle al componente `<SearchBar />` la búsqueda del usuario                             |
 
-
-
-
-
 ---
+
 # Variables de entorno
 
 En la base del proyecto se encuentra un archivo llamado `.env-template`, el cuál es utilizado por el comando `npm run refresh_token` para obtener un nuevo `ACCESS_TOKEN`. (Ver más sobre **Configuración de token**)
@@ -474,7 +470,7 @@ Con el archivo `.env` generado, se definen las variables de entorno que se van a
 
 **Causa:** No existe o expiró el ACCESS_TOKEN.
 
-**Solución:** Si estas levantando el proyecto de forma manual, debes correr el comando `npm run refresh_token`. Si lo haces con docker, con que vuelvas a hacer `docker-compose up` soluciona el problema.
+**Solución:** Si se esta levantando el proyecto de forma manual, se debe correr el comando `npm run refresh_token`. Si se realiza con docker, con volver a hacer `docker-compose up` soluciona el problema.
 
 ## Status 204
 
@@ -504,6 +500,6 @@ Con el archivo `.env` generado, se definen las variables de entorno que se van a
 
 **Solución:** Al tener levantado el proyecto en modo de desarrollo, la página muestra el error de arriba, pero en modo de producción muestra la página de error.
 
-Para poder ver la página de error en un entorno local hay que hacer el build del proyecto con `npm run build` y se levantarlo con en modo de producción con `npm run start`.
+Para poder ver la página de error en un entorno local hay que hacer el build del proyecto con `npm run build` y levantarlo con en modo de producción con `npm run start`.
 
 ![Server Error - Prod](https://raw.githubusercontent.com/alotama/fantastic-garbanzo/main/docs/images/serverErrorProd.png)

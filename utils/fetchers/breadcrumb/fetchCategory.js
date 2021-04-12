@@ -2,12 +2,8 @@ const FetchProductCategory = async (query, cache) => {
   const productCache = cache.mget(["productCategory"])
   
   if (productCache && productCache.productCategory && productCache.productCategory.id === query) {
-    console.log('cache productCategory')
-
     return productCache.productCategory
   } else {
-    console.log('fetch Category')
-
     try {
       let getProductCategoryResponse = await fetch(`${process.env.API_URL}categories/${query}`, {
         method: 'GET',

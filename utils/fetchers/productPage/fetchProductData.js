@@ -1,10 +1,8 @@
 const FetchProductData = async (query, cache) => {
   const productCache = cache.mget(["productData"])
   if (productCache && productCache.productData && productCache.productData.id === query) {
-    console.log('cache data')
     return productCache.productData
   } else {
-    console.log('fetch Data')
     try {
       let getProductDataResponse = await fetch(`${process.env.API_URL}items/${query}`, {
         method: 'GET',
