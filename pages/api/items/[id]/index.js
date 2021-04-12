@@ -33,7 +33,6 @@ const getParsedProductPage = async (req, res) => {
     }
 
     res.status(200).json(parsedProductData)
-    return parsedProductData
   } catch (e) {
     console.error({
       "message": "No se pudo parsear correctamente la respuesta de la API",
@@ -42,7 +41,6 @@ const getParsedProductPage = async (req, res) => {
       "cause": [e],
     })
     res.status(e.status).json(parsedProductData)
-    return parsedProductData
   }
 }
 

@@ -1,5 +1,6 @@
 import GetParsedProductPage from '../../../../pages/api/items/[id]'
 import { productDataMock, productDescriptionMock, categoryMock, productParsedDataMock } from 'api/items/[id]'
+import { createMocks } from 'node-mocks-http';
 
 global.fetch = jest.fn(() => Promise.resolve({
   status: 200,
@@ -18,13 +19,17 @@ beforeEach(() => {
 
 describe("Test /api/:id", () => {
   test("GetParsedProductPage - Description", async () => {
-    const req = {
-      query: { id: 'MLA897952360' },
-    }
-    const res = {};
-    res.status = () => res;
-    res.json = () => res;
-    const productParsedData = await GetParsedProductPage(req, res)
+    const { req, res } = createMocks({
+      method: 'GET',
+      query: {
+        id: 'MLA897952360',
+      },
+    });
+
+    await GetParsedProductPage(req, res)
+    const productParsedData = JSON.parse(res._getData())
+    
+    expect(res.statusCode).toBe(200)
 
     expect(typeof productParsedData.item).toBe(typeof productParsedDataMock.item)
     expect(typeof productParsedData.item.id).toBe(typeof productParsedDataMock.item.id)
