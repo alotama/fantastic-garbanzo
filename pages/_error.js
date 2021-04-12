@@ -2,7 +2,6 @@ import Layout from '@components/Layout'
 import ProductError from '@components/Errors'
 
 function Error({ query, productID }) {
-  // Diferenciar los casos en los que la API da un error y en los casos en los que no se encuentra un producto
   return (
     <Layout>
       {query && (

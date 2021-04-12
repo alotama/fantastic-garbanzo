@@ -8,13 +8,14 @@
     "start": "next start",
     "test": "jest __tests__",
     "test:watch": "jest __tests__ --watchAll",
-    "cypress:open": "next dev & cypress open",
-    "cypress:run": "next dev & cypress run",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "refresh_token": "./refresh_token.sh"
   },
   "dependencies": {
     "next": "10.1.2",
     "node-cache": "5.1.2",
+    "node-mocks-http": "1.10.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "1.32.8"
