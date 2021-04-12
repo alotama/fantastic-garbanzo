@@ -9,6 +9,7 @@
     grid-template-columns: repeat(4,1fr);
     column-gap: $space-md;
     padding: $space-md 0;
+    cursor: pointer;
   }
 }
 

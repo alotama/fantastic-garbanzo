@@ -1,4 +1,3 @@
-import searchBarContext from '@components/SearchBar/searchBarContext'
 import { stringNormalize } from '@utils/helpers'
 
 const fetchSearchResult = async (query, cache) => {
