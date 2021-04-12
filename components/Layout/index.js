@@ -20,6 +20,7 @@ const Layout = ({ children, title, description, picture, pageURL, search }) => {
         <meta name={"og:description"} content={description || ''} />
         <meta name={"og:url"} content={`${process.env.SITE_URL}/${pageURL || ''}`}/>
         <link rel="canonical" href={`${process.env.SITE_URL}/${pageURL || ''}`} />
+        <meta name="robots" content="index, follow" />
       </Head>
       <SearchBar search={search}/>
       <main className={'layout__main'}>
